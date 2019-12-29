@@ -24,7 +24,7 @@ Wie in Abschnitt 2.3 nachvollziehbar ergeben sich hieraus theoretisch die Mögli
 
 \paragraph{Arbeitsaufgaben}
 Der Großteil der Modellierer arbeitet in laufenden Projekten von Elektrobit und modelliert dort mithilfe von EB Guide 6 Human Machine Interfaces für die Automobilbranche.
-Ein anderer Teil der Zielgruppe arbeiten an Kundendemonstrationen mit derern Hilfe dargestellt wird was mit der aktuellen Version von EB Guide 6 modelliert werden kann.
+Ein anderer Teil der Zielgruppe arbeiten an Kundendemonstrationen mit deren Hilfe dargestellt wird was mit der aktuellen Version von EB Guide 6 modelliert werden kann.
 Beide Gruppen setzten bei ihrer Arbeit Spezifikationen um die nach den Wünschen des Kunden direkt von diesem oder von Designfirmen erstellt werden.
 Diese Spezifikationen bestehen meist aus einem schriftlichen Teil der die Logik beschreibt nach der das Interface arbeiten muss, sowie aus einem grafischen Teil der die Anordnung von Icons und Texten zeigt.
 
@@ -46,7 +46,8 @@ Zusätzlich können durch den Beobachter begleitend Fragen gestellt werden.
 Bei der Durchführung der Beobachtungen fallen einige Dinge auf die die Modellierer bei der Durchführung ihrer Arbeit behindern oder erheblich verlangsamen.
 Teilweise fällt den Nutzern das selbst auf und sie weisen den Beobachter darauf hin, teilweise haben sie sich bereits so an die Arbeitsschritte gewöhnt das die Behinderung nur einem Außenstehenden auffällt, den Nutzern selbst jedoch kaum noch.
 
-Im Folgenden werden zuerst Beobachtungen allgemein erläutert, bevor die Bedürfnisse der Nutzer formuliert werden, damit es abschließend möglich ist die Benutzeranforderungen zu definieren.
+Im Folgenden werden zuerst Beobachtungen allgemein erläutert, bevor die Bedürfnisse der Nutzer formuliert werden, damit es abschließend möglich ist die qualitativen Benutzeranforderungen zu definieren.
+Die Quantitativen Anforderungen werden in Kapitel 5, im Rahmen des tatsächlichen Usability Tests aufgeführt.
 
 \paragraph{Image List}
 Bei einer Image List handelt sich um ein Datapool Item. 
@@ -155,19 +156,84 @@ Aktuell bietet EB Guide jedoch noch keine Unterstützung für Multiselektion, si
 Nutzer, die mehrere Objekte gleichzeitig selektiert haben, müssen die Möglichkeit haben all deren Properties nach ihren Wünschen zu verändern.
 
 \section{Verbesserungen}
-Da es Aufgrund der zeitlichen Einschränkungen dieser Arbeit nicht möglich ist alle aufgeführten Schwächen weiter zu analysieren wird im Folgenden erläutert auf welchen Grundlagen die Auswahl für die Verbesserungen getroffen wurde, welcher Gewinn für den Nutzer sich durch diese Verbesserungen versprochen wird und welches Design für die Verbesserungen angestrebt wird.
+Da es Aufgrund der zeitlichen Einschränkungen dieser Arbeit nicht möglich ist alle aufgeführten Schwächen weiter zu analysieren wird im Folgenden erläutert auf welchen Grundlagen die Auswahlkriterien festgelegt werden.
+Darauf folgend wird jede Verbesserungen anhand dieser Auswahlkriterien eingestuft bevor abschließend das angestrebte Design für die ausgewählten Verbesserungen erläutert wird.
+In diesem Abschnitt wird bereits der dritte Iterationspunktes des Designprozesses angeschnitten, indem hier der Styleguide für den im Folgenden erstellten Prototypen festgelegt wird. Dies geschieht auf Grundlage der bereits erläuterten Gestaltprinzipien der Usability.
 
 \subsection{Auswahlkriterien}
-Ausgangspunkt für weiterführende Untersuchungen
+Da innerhalb dieser Arbeit nur eine Iteration des Human-centered design process durchgeführt werden kann, ist es wichtig sich auf Schwächen zu fokussieren die zum einen eventuell innerhalb dieser einen Iteration schon zufriedenstellende Ergebnisse liefern würden, es zum anderen aber auch Teile gab die höchstwahrscheinlich weiterer Iterationen zum ausreifen benötigen um auch für Elektrobit einen Mehrwert zu schaffen.
+In Anbetracht dieser Angabe und des zeitlichen Rahmens ist es also wünschenswert eine Mischung aus ein bis zwei kleineren Anpassungen und einer aufwändigeren Anpassung zu finden, die sich einem zusammengehörigen Test vereinbaren lassen.
+Die aufwändigere Anpassung soll hierbei Stoff für weitere Analysen, nach Abschluss dieser Arbeit liefern, die kleineren Anpassungen sollen nach einer Iteration schon zu konkreteren Ergebnissen führen.
 
-\subsection{Gewinn für den Nutzer}
-Effizienzsteigerung
-intuitiver Bedienung
+Um die Anpassungen in einem Test überprüfen zu können ist notwendig sich auf zwei Prinzipien der Usability zu beschränken die gemessen werden, da der Umfang des abschließenden Testes sonst zu groß werden würde. Wie in Abschnitt 3.3.1 bereits erwähnt ergeben sich aufgrund der Zielgruppe aktuell die Möglichkeiten einer Überprüfung auf Effizienz, Wiedererkennungswert, Fehler und Zufriedenheit.
+Wie bereits erwähnt findet die Evaluierung der Zufriedenheit meist mit Fragebögen statt, die jedoch bei der Untersuchung der anderen Prinzipien nicht anwendbar sind, weshalb die objektive Zufriedenheit in dieser Arbeit nicht untersucht wird.
+Die Untersuchung des Wiedererkennungswert wäre möglich, da es sich bei der ausgewählten Gruppe jedoch um eine Mischung von Experten und Gelegenheitsnutzern handelt wären hier getrennte Testaufgaben für die Gelegenheitsnutzer nötig, da der Wiedererkennungswert nur bei diesem Teil der Zielgruppe untersucht werden kann.
+Außerdem ist bei den im vorherigen analysierten Schwächen keine aufgetreten die direkt mit diesem Prinzip in Verbindung gebracht werden könnte.
 
+Was in den analysierten jedoch deutlich auffällt ist die Verringerung der Effizienz bei der gesamten Zielgruppe, nicht nur bei den Experten.
+Da für eine Messung dieses Attributes ohnehin eine Zeitmessung nötig ist, kann man während dieser Messung auch gut die von System auftretenden Fehler und deren Auswirkungen auf den weiteren Arbeitsverlauf festhalten.
+Die ausgewählten Verbesserungen müssen also hauptsächlich auf Effizienz und gegebenenfalls noch auf auftretende Fehler untersuchbar sein.
+
+Zusätzlich zu den bereits genannten Kriterien ist darauf geachtet worden vor allem solche Verbesserungen zuerst zu berücksichtigen die dem Nutzer, nach objektiver Meinungen, aktuell den größten Mehrwert liefern.
+
+\subsection{Auswahl nach Auswahlkriterien}
+
+\paragraph{Image List}
+Die Anpassung der Befüllung der Image List ist als eine große, aufwändige Anpassung einzuordnen.
+Allerdings ist hier bereits absehbar das eine Anpassung die Effizienz deutlich steigern würde, da eine gruppiertes Einfügen auf jeden Fall eine Zeitersparnis mit sich bringt.
+Darüber hinaus haben sich für die Lösung dieses Problems einige Teams bereits Plug-Ins geschrieben die genau dieses Problem beheben. 
+Diese sind zwar kein Teil des offiziellen Tools, werden jedoch von den internen Teams bereits routiniert benutzt, weshalb diese Anpassung auf kurze Sicht keinen Mehrwert liefern würde, sondern dies erst für neu startende Projekte der Fall wäre.
+
+Die Anpassung der Image List würde also zum einen nicht das Kriterium erfüllen für weiterer Analysen geeignet zu sein, da der Mehrwert der Anpassung bereits sehr deutlich ist, zum anderen existiert bereits eine temporäre Lösung für dieses Problem.
+
+\paragraph{Navigation}
+Bei der Anpassung der Naviagtion würde es sich um eine kleinere Anpassung handeln.
+Allerdings gibt es für diese Problematik ebenfalls schon eine Lösung die in \cref{fig:Outline} zu sehen ist.
+Es handelt sich hierbei um ein Panel in EB Guide Studio, welches sich Standardmäßig unterhalb des Navigationspanels befindet.
+Greift man noch einmal das Beispiel aus \cref{fig:Navigation} auf, sieht die Lösung in EB Guide Studio für dieses Problem aktuell so aus, das für jedes ausgewählte Objekt dessen Umgebung in der Outline angezeigt wird.
+Dies funktioniert auch gut für neu eingefügte Elemente, da diese defaultmäßig nach dem Einfügen ausgewählt werden.
+
+Während der Beobachtung der Nutzer fällt jedoch auf das niemand diesen Outliner zu benutzen scheint, sondern lieber direkt im WidgetTree arbeitet.
+An diesem Punkt wären also weitere Analysen nötig, ob manche Nutzer eventuell auch nichts von der Existenz dieser Funktion wissen oder ob ihnen die Nutzung zu unhandlich ist.
+Aufgrund dieser Ausstehenden Analysen ist diese Schwäche jedoch auch nicht für eine Überarbeitung in dieser Bachelorarbeit geeignet.
+
+\begin{center}
+  \includegraphics[scale=0.8]{figures/Outline.png}
+  \captionof{figure}{Ergänzung zur Navigation in Form einer Outline}
+  \label{fig:Outline}
+\end{center}
+
+\paragraph{Template Properties}
+Die Verlagerung des Hotspots für die Funktion publish to template interface, kann ebenfalls als eine kleine Änderungen betrachtet werden.
+Für diese Anpassung lässt sich mit einer Gegenüberstellung des alten und neuen Interfaces gut die benötigte Zeit der Nutzer messen, außerdem kann man hier gut herausfinden ob die Verlagern für die Nutzer intuitiv ist oder ob doch lieber die alte Variante genutzt wird.
+Es wird also bereits nach der ersten Iteration Ergebnisse auftreten die eine konkrete Beurteilung des Vorgehens zulassen, weshalb sich diese Anpassung für den Test eignet.
+
+\paragraph{Widget Feature Properties}
+Bei dem Filter für die Widget Feature Properties handelt es sich um eine kleine bis mittelgroße Anpassung, der Mehrwert ist hier allerdings, vor allem für Experten die die Namen der Features kennen, bereits absehbar.
+Trotzdem eignet sich diese Anpassung ebenfalls gut für die Untersuchung der Effizienz.
+Das es eine Steigerung der Benutzerfreundlichkeit gibt ist stark zu erwarten, ob es den Nutzern jedoch tatsächlich auch zu einem schnelleren Arbeitsablauf verhilft ist nicht sicher.
+Zudem ist es hier interessant ob eine komplette neue Ergänzung im Interface von den Nutzern überhaupt von selbst bemerkt wird.
+Diese Anpassung kann also als zweite kleinere Anpassung neben der Anpassung der Template Properties untersucht werden.
+
+\paragraph{Mehrfachselektion}
+Bei der Anpassung für die Mehrfachselektion handelt es sich um die Anpassung, das EB Guide hierfür im Gegensatz zu den anderen aufgeführten Schwächen, noch keinerlei Implementierung bietet.
+Es ist aktuell lediglich möglich mehrere Elemente gleichzeitig auszuwählen und im View zu bewegen, es existiert jedoch kein Panel das die aktuellen Properties oder Ähnliches anzeigt.
+Dadurch ist es sehr wahrscheinlich, das mehrere Iterationen nötig sind um die Funktionen zufriedenstellend für den Nutzer darzustellen.
+Ebenfalls ist eine Untersuchung auf Effizienz sehr gut möglich, da ein direkter Vergleich des entstehenden Zeitaufwandes mit und ohne Multiselektion getätigt werden kann.
+Wegen dieser ganzen Merkmale eignet sich die Multiselektion also sehr gut für die große Anpassung in dieser Arbeit.
 
 \subsection{Design der Verbesserungen}
 
 \paragraph{Template Properties}
+
+Wie in \cref{fig:TemplateProperties_Adaption} zu sehen ist für diese Abänderung keine tatsächliche Abwandlung des Designs notwendig, das sich lediglich der Hotspot verlagert.
+Trotzdem werden hier einige Gestaltprinzipien der Usability berücksichtigt.
+Die nötige Rückmeldung an den Nutzer geschieht durch die Änderung der Farbe des Kreises.
+Diese Rückmeldung war vorher auch schon vorhanden, allerdings wurde durch die Vorherige Lösung eine minimal Verletzung des Mappings verursacht, da durch eine Interaktion mit dem Quadrat eine Rückmeldung mithilfe des Kreises erzeugt wurde. 
+Das Mapping wurde also durch das hier vorgestellte Design verbessert.
+
+Im Gegensatz dazu wird jedoch durch die Anpassung aktuell die interne Konsistenz verletzt, da die Interaktion mit den Template Properties auch noch an anderen Stellen möglich ist, wo die Anpassung zum aktuellen Zeitpunkt noch nicht integriert wurde.
+Diese Verletzung kann jedoch nach Validierung durch den Usability Test im Nachhinein angepasst werden, oder der Hotspot auf dem Kreis könnte als zusätzlich Ergänzung für Expertennutzer existieren.
 
 \begin{center}
   \includegraphics[scale=0.8]{figures/TemplateProperties_Adaption.png}
@@ -177,18 +243,44 @@ intuitiver Bedienung
 
 
 \paragraph{Widget Feature Properties}
+Für das hinzufügen einer Filterfunktion ist das einfügen einer Filterleiste in das Interface, wie in \cref{fig:FeatureProperty_Adaption} zu sehen, nötig.
+
+Als Gestaltprinzip der Usability wird hier zum einen die  ästehtisch, funktional und intern Konsistenz des Designs zu anderen Such- und Filterfunktionen die in der Benutzeroberfläche von EB Guide Verwendung finden gewahrt.
+Dadurch ergibt sich auch automatisch eine externe Konsistenz, da das bereits bestehende Design dieser Leisten von Elektrobit an das Design bereits bekannter Suchleisten angelehnt wurde.
+
+Aktuell wird die in Abschnitt 2.7 erwähnte Problematik der Sichtbarkeit in komplexen Systemen durch die ausklappbaren Menüs gelöst.
+Dies führt jedoch in diesem konkretem Fall häufig dazu das all diese Menüs, während der Suche nach dem richtigen Feature, aufgeklappt werden müssen.
+Der geplante Filter soll die Nutzer insofern unterstützen das sie die Sichtbarkeit der Features nach ihren eigenen Bedingungen regeln können, wenn sie wissen nach welchem Feature sie suchen.
+
+Als Gestaltprinzip der Affordanz wird durch den ausgegrauten Text in der Filterleiste berücksichtigt, da der Nutzer durch den Text "Filter Widget features" die direkte Aufforderung erhält was hier getan werden kann, zum anderen durch den grauen Text suggeriert bekommt das hier etwas anklickbar und dann eintragbar ist.
+
+Die Rückmeldung die für den Nutzer sehr wichtig ist erfolgt durch die Tatsache, das der Filter live auf die Änderungen des Nutzers reagiert, es also eine sehr schnelle Anpassung der Liste der Features gibt.
 
 \begin{center}
-  \includegraphics[scale=0.4]{figures/WidgetFeatureProperty_Adaption.png}
+  \includegraphics[scale=0.5]{figures/WidgetFeatureProperty_Adaption.png}
   \captionof{figure}{Verbesserung Feature Property Properties}
   \label{fig:FeatureProperty_Adaption}
 \end{center}
 
 
 \paragraph{Mehrfachselektion}
+Um die Anpassung der Properties bei Mehrfachselektion zu ermöglichen ist es nötig ein Propertiespanel anzuzeigen, wie in \cref{fig:Mehrfachselektion_Adaption} zu sehen.
+Wie bei der normalen Auswahl eines Elementes werden dort Properties wie width/height und die Koordinaten angezeigt, zusätzlich gibt es mit den neuen Alignment Actions noch möglich die ausgewählten Elemente aneinander auszurichten.
+Diese Funktion gibt es bisher in EB Guide Studio noch überhaupt nicht, erschien jedoch in diesem Kontext der Mehrfachselektion eine geeignet Ergänzung zu sein.
+
+Auch hier wird die ästhetische, funktionale und interne Konsistenz bei den Textfeldern der Properties gewahrt, da sie exakt so aussehen wie die bereits bekannten bei der Auswahl eines Elements.
+Externe Konsistenz wird durch die Striche gewahrt, die als Platzhalter bei den Properties fungieren wenn die ausgewählten Elemente zum Beispiel bei der x-Koordinate unterschiedliche Werte aufweisen.
+
+In EB Guide ist es allgemein so das nur die Properties sichtbar sind, die für die aktuell ausgewählten Elemente relevant und veränderbar sind.
+Diese Einschränkung der Sichtbarkeit ist dementsprechend auch bei der Multiselektion zu beachten.
+
+Das Prinzip der Affordanz  wird bei den Buttons für die Alignment Actions berücksichtig, indem diese einen Schatten bekommen um sie klickbar erscheinen zu lassen.
+Ebenfalls wird es wieder bei den Textfeldern neben den Buttons berücksichtigt, wie es auch bei der Filterfunktion bereits der Fall war.
+
+Eine Rückmeldung  an den Nutzer, das seine Eingaben erfolgreich waren, erfolgt durch die sofortige Veränderung der Elemente im View, entweder durch Änderungen der Position, oder der Breite und Höhe.
 
 \begin{center}
-  \includegraphics[scale=0.4]{figures/Mehrfachselektion_Adaption.png}
+  \includegraphics[scale=0.8]{figures/Mehrfachselektion_Adaption02.png}
   \captionof{figure}{Verbesserung Mehrfachselektion}
   \label{fig:Mehrfachselektion_Adaption}
 \end{center}
