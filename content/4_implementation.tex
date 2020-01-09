@@ -21,9 +21,11 @@ Ob diese Anpassungen jedoch innerhalb eines Prototypen oder im XAML Code stattfi
 Daher ist es für diese Änderung in diesem Fall effizienter die Änderungen direkt zu implementieren und das Verhalten nicht zuerst innerhalb eines Prototypen zu simulieren.
 
 \section {Prototyp Multiselektion und Template Properties}
-In den folgenden Abschnitten wird alles Relevante in Bezug, auf die im Prototpy umgesetzten Änderungen erläutert.
-Zuerst gibt es keine kurze Begründung für die Wahl des Prototyping Tools, bevor dieses noch kurz in seinen Grundfunktionen erläutert wird.
-Danach werden die nötigen Interaktionsmöglichkeiten erläutert, die dem Nutzer für einen erfolgreichen Umgang mit dem Prototypen simuliert werden müssen, bevor letztlich die Vorgehensweise beschrieben wird um diese Anforderungen umzusetzen.
+In den folgenden Abschnitten wird alles Relevante in Bezug, auf die im Prototyp umgesetzten Änderungen erläutert.
+Zuerst gibt es keine kurze Begründung für die Wahl des Prototyping Tools.
+Da für diese Arbeit eine Einarbeitung in dieses Tool notwendig war wird dieses darauf folgend in seinen verstandenen Grundfunktionen erläutert.
+Dies ist auch notwendig um die abschließend erklärte Vorgehensweise zur Erstellung des Prototyps zu verstehen.
+Danach werden die nötigen Interaktionsmöglichkeiten definiert, die dem Nutzer für einen erfolgreichen Umgang mit dem Prototypen simuliert werden müssen, bevor letztlich die Vorgehensweise beschrieben wird um diese Anforderungen umzusetzen.
 
 \subsection {Axure RP}
 Axure RP ist eine Software die es ermöglicht Wireframes, Prototypen, Dokumentationen und Spezifikationen für Web-, Mobil- oder Desktopanwendungen zu erstellen.
@@ -129,9 +131,12 @@ Genauere Erläuterungen zu den Aufgaben innerhalb des Usability Test folgen ents
 
 
 \subsection{Vorgehensweise}
-Im folgenden werden die gurndlegenden Vorgehensweisen erläutert die angewandt wurden um den letztendlichen Prototypen zu erstellen.
-Es ist im Rahmen dieser Arbeit nicht möglich alle Anpassungen zu erläutern die getätigt werden mussten, es werden jedoch die maßgeblichen Konzepte und Funktionen vor allem in Bezug auf die wichtigsten Anpassungen aufgeführt.
+Im folgenden werden die grundlegenden Vorgehensweisen erläutert die angewandt wurden um den Prototypen zu erstellen.
+Es ist im Rahmen dieser Arbeit nicht möglich alle exakten Anpassungen zu erläutern die getätigt werden mussten.
+Es werden jedoch alle maßgeblichen Konzepte und Funktionen aufgeführt die in Zusammenhang mit den eingebauten Neuerungen stehen.
+Alle nicht ausführlich erklärten Änderungen wurde auf ähnliche Art und Weise umgesetzt, wie solche die in den nächsten Abschnitten erläutert werden.
 
+\paragraph{Grundlage}
 Vor allem bei Expertennutzern ist es wichtig, das der Prototyp sich nicht nur verhält wie die  gewohnte Software, sondern sich auch optisch an ihr orientiert.
 Von daher war der Ansatz zur Modellierung des Prototypen einen Screenshot von der aktuellen Version von EB GUIDE Studio zu machen und diesen als statischen Hintergrund, wie in \cref{fig:Prototyp_01} zu sehen, für das weitere Vorgehen zu benutzen.
 Darauf aufbauend können nach und nach Interaktionsmöglichkeiten innerhalb des Prototypen platziert werden.
@@ -142,8 +147,9 @@ Darauf aufbauend können nach und nach Interaktionsmöglichkeiten innerhalb des 
   \label{fig:Prototyp_01}
 \end{center}
 
+\paragraph{Assets und Toolbox}
 Die Assets und die Toolbox sind wichtige Interaktionsmöglichkeiten für den Nutzer, da von hier aus alle zur Verfügung stehenden Widgets oder Ressources in den View gezogen werden.
-Für beide Elemente wird eine Scrollbar benötigt, da dies aufgrund der Masse der Widgets in EB GUIDE ebenfalls bereits so gelöst ist.
+Für beide Elemente wird eine Scrollbar benötigt, da die Nutzer dies zum einen  an dieser Stelle gewohnt sind, zum anderen bestünde sonst keine Möglichkeit alle Widgets und Elemente anzuzeigen.
 In AXURE ist es hierfür nötig ein Dynamic Panel zu erstellen und es mit allen benötigten Elementen zu befüllen die in der Scrollbar vorhanden sein sollen.
 Für ein Dynamic Panel ist es möglich eine feste Größe anzulegen, sollten dessen Elemente in der vorgegebenen Dimension nicht alle Platz finden hat man nun die Möglichkeit Vertikales oder Horizontales Scrolling zu aktivieren.
 In \cref{fig:Prototyp_02} sieht man beispielhaft die Umsetzung für das Assetspanel.
@@ -163,11 +169,11 @@ Der Grund dafür das jedes einzelne Bild in den Assets ebenfalls ein Dynamic Pan
 Sie bieten die einzigartigen Interactions \glqq Drag Started\grqq{},\glqq Dragged\grqq{} und \glqq Drag Dropped\grqq{} über welche gesteuert werden kann wie sich die Items während des Vorgangs verhalten.
 Hier erweist es sich vor allem als praktisch \glqq Drag Dropped\grqq{} mit einer If Bedingung zu versehen, damit das Element nur über dem dafür vorgesehenen View abgelegt werden kann, und nicht zum Beispiel im Bereich der Datapoolitems.
 
-Sobald etwas in den View etwas hinzugefügt wird, muss dies für den Nutzer ebenfalls im Widgettree sichtbar werden.
-In \cref{fig:Prototyp_03} is zu sehen das hier ebenfalls wieder mit einem Screenshot aus dem tatsächlich EB GUIDE gearbeitet wurde, die gelben Pfeile markieren bestehende Interaktionen in AXURE.
-Man sieht, dass sich hier noch mehr Elemente im Widget Tree befinden, die vorläufig überdeckt wurden.
+\paragraph{Widget Tree}
+Sobald etwas in den View hinzugefügt wird, muss dies für den Nutzer ebenfalls im Widgettree sichtbar werden.
+Dies ist ebenfalls mithilfe eines Screenhots gelöst und man sieht in \cref{fig:Prototyp_03} , dass sich hier noch mehr Elemente im Widget Tree befinden, die vorläufig überdeckt wurden.
 Fügt der Nutzer nun das entsprechende Element zum View hinzu, wird die Abdeckung entfernt und er kann das Objekt nun auch über den Widget Tree auswählen.
-Diese Verhalten ist ebenfalls wieder mit logischen Bedingungen umgesetzt.
+Die Interaktionsmöglichkeit wird innerhalb von AXURE mit den gelben Blitzen gekennzeichnet und ist ebenfalls wieder mit logischen Bedingungen umgesetzt.
 
 \begin{center}
   \includegraphics[scale=0.8]{figures/Prototyp_03.PNG}
@@ -175,15 +181,16 @@ Diese Verhalten ist ebenfalls wieder mit logischen Bedingungen umgesetzt.
   \label{fig:Prototyp_03}
 \end{center}
 
+\paragraph{Properties}
 Um die Interaktion mit allen eingefügten Elementen möglich zu machen, hat jedes Element sein eigenes Propertiespanel erhalten, welches in \cref{fig:Prototyp_04} zu sehen ist.
 Damit dem Nutzer immer klar ist welches Element aktuell ausgewählt ist, wurde auch hier das Verhalten von EB GUIDE nachgebaut, indem jedes ausgewählte Element einen grünen Rahmen erhält.
-Die Auswahl hierfür muss über das Element selbst oder den Widget Tree möglich sein, in letzterem Fall wurde das wieder über Hot Spots und logische Bedingungen umgesetzt.
+Die Auswahl hierfür muss über das Element selbst oder den Widget Tree möglich sein.
 
 Ist das Objekt aktuell ausgewählt erscheint ein entsprechendes Propertiespanel welches ebenfalls wieder einen Screenshot beinhaltet der mit Textfeldern überlagert wird.
 Diese Felder sind mit globalen Variablen verknüpft, welche wiederum die Properties der Bilder im Workspace von AXURE anpassen.
 Dadurch wird es ermöglicht, dass Eingaben in das Textfeld das Objekt verändern und umgekehrt, Bewegungen des Objektes die Werte in den Textfeldern aktualisieren.
 Damit wird für den Nutzer das exakt gleiche Verhalten nachmodelliert welches in EB GUIDE existiert.
-Das gleiche Verhalten gilt für Texte, nur haben iese statt eines Image Properties ein Text Property.
+Ein identisches Verhalten ist für die Texte modelliert, nur haben diese statt eines Image Properties ein Text Property.
 
 \begin{center}
   \includegraphics[scale=0.8]{figures/Prototyp_04.PNG}
@@ -191,9 +198,10 @@ Das gleiche Verhalten gilt für Texte, nur haben iese statt eines Image Properti
   \label{fig:Prototyp_04}
 \end{center}
 
+\paragraph{Multiselektion}
 Ist nur ein Objekt ausgewählt wird der Wert der globalen Variable im entsprechenden Textfeld angezeigt.
 Da dieser Wert bei der Multiselektion jedoch nur angezeigt werden soll wenn er für alle ausgewählten Objekte identisch ist, und ansosnten ein Strich sichtbar sein soll, ist es hier notwendig die Properties der ausgewählten Objekte zu vergleichen.
-Hierfür muss zuerst abgefragt werden welche Objekte ausgewählt sind und dann deren Properties verglichen werden.
+Hierfür muss zuerst abgefragt werden welche Objekte ausgewählt sind, um dann deren Properties zu vergleichen.
 Da AXURE bei den logischen Bedingungen nur \glqq Match Any\grqq{} oder \glqq Match All\grqq{} unterstützt ist keine Kombination von AND und OR Bedingungen möglich.
 Deshalb wird an diesem Punkt nur mit AND Bedingungen in den Abfragen gearbeitet, da jedoch für alle möglichen Kombination der drei zur Verfügung stehende Bildern jede Property einzeln abgefragt und angepasst werden muss ergibt das eine Anzahl von 36 Abfragen.
 
@@ -227,6 +235,7 @@ Dadurch verschiebt sich das zweite Objekt und der Abstand der zwei Objekte entsp
 \label{fig:Prototyp_06}
 \end{figure}
 
+\paragraph{Templates}
 Das Anlegen von Templates wird ebenfalls mit Screenshots simuliert die mit Hotspots versehen werden.
 Zusätzlich besteht hier noch die Notwendigkeit einen Imagetab neben dem View anzulegen, da das Erstellen der Templates in einem anderen Bereich stattfindet.
 In diesem Tab existiert ebenfalls ein Propertiespanel, die Funktion \glqq publish to template interface\grqq{} geschieht wie geplant über einen Klick auf den Kreis, der sich nach der Auswahl blau einfärbt.
@@ -239,7 +248,7 @@ Deshalb wurden hier zwei getrennte Sets von globalen Variablen angelegt, welche 
   \label{fig:Prototyp_08}
 \end{center}
 
-Die Zuweisung der Bilder im Template findet über ein Droplist statt, welches in \cref{fig:Prototyp_08} zu sehen ist.
+Die Zuweisung der Bilder im Template findet über ein Droplist statt, welche in \cref{fig:Prototyp_08} zu sehen ist.
 Die Vorgehensweise, wie der sichtbare Inhalt eines Dynamic Panels mithilfe einer Droplist angepasst werden kann wurde bereits in Abschnitt 4.1.1 erklärt.
 Anstatt der bunten Kreise befindet sich in diesem Fall jeweils eine Ausführung aller Bilder in den Dynamic Panels welche je nach Auswahl aus der Droplist sichtbar oder unsichtbar geschaltet werden.
 Die Alternative Vorgehensweise \glqq Insert in Template\grqq{} funktioniert nach dem gleichen Prinzip.
@@ -248,18 +257,75 @@ Dieses wird dann nach einem Klick auf den Button entsprechend angezeigt.
 
 
 \section {Implementierung Filter}
+Nach der Fertigstellung des Prototyps ist es nun noch nötig den Filter zu implementieren.
+Da hier eine direkte Umsetzung im Sourcecode von EB GUIDE geplant ist gibt es im Folgenden, nach der Formulierung der Zielsetzung,  einen groben Überblick über den Aufbau des Projektes.
+Wie bei der Erstellung des Prototypen im vorherigen Kapitel wird abschließend noch aufgezeigt mit welchem Vorgehen diese Zielsetzung umgesetzt wurde.
+
 \subsection {Zielsetzung}
-Optische und Funktionale Umsetzung des UX Design
+Das Ziel dieses Arbeitsabschnittes ist die Umsetzung des in Abschnitt 3.1.3 definierten optischen und funktionalen Designs.
+Da es sich um eine Implementierung handelt ist hier keine Einarbeitung in ein Tool wie AXURE RP notwendig, vielmehr muss der Aufbau des bereits bestehenden Projektes verstanden werden.
+Konkret muss für die Umsetzung des Designs eine Filterfunktion implementiert werden, die die bereits vorhandenen Widget Feature Properties nach den Wünschen des Nutzers filtert.
+Hierfür wird für den Nutzer eine Eingabemöglichkeit benötigt, mit der er interagieren kann, wie er es von den Filterfunktionen anderer Anwendungen gewohnt ist.
+Zusätzlich sollen bei der Nutzereingabe die aktuell bestehenden Kategorien verschwinden und in Echtzeit nur die passenden Features ohne zugehörige Kategorie angezeigt werden.
 
 \subsection {Projektaufbau}
 
-Model-View-ViewModel (MVVM) 
-\cite{.g}
+\paragraph{Programmiersprachen und Entwicklungsumgebung}
+EB GUIDE Studio wird als WPF Anwendung umgesetzt und ist somit in C\# geschrieben.
+WPF ist Teil des .NET-Frameworks 3.0, durch dessen Basis dem Entwickler eine große objektorientierte Klassenbibliothek zur Verfügung steht.
+Innerhalb dieser Klassenbibliothek ist auch C\# zu finden, welche eine typsichere, objektorientierte Allzweck-Programmiersprache ist.
+Für die Deklarierung der Elemente des User Interfaces benutzt WPF die Sprache XAML, wleche auf XML basiert.
 
-CollectionViewSource
+Da das Projekt Firmenintern als eine Visual Studio Solution vorliegt, werden auch sämtliche Implementierungen im Rahmen dieser Arbeit innerhalb dieser Entwicklungsumgebung umgesetzt.
+
+\paragraph{Design Pattern}
+In der Projektentwicklung wird das Model-View-ViewModel (MVVM) Design Pattern angewandt.
+Bei der früheren Entwicklung von User Interfaces, haben Entwickler häufig eine grafische View erstellt und im Nachhinein die Logik hinzugefügt.
+Dies geschieht meist in Form von Eventhandlern, Initialisierungen oder Datenmodellen im Code Behind, was zu einer starken gegenseitigen Abhängigkeit von Interface und der dahinter liegenden Logik führt.
+Dadurch entstehen Problematiken wie die Tatsache, dass nicht mehrere Entwickler gleichzeitig an der gleichen View arbeiten können, oder ein Entwickler durch seine Änderungen den Code eines anderen Entwickler unbrauchbar macht.
+Logik und Aussehen eines Interface an einer Stelle zu bündeln führt also zu schlechter Wartbarkeit, Erweiterbarkeit und ist kaum testbar\cite{.g}.
+Die aufgeführten Probleme entstehen also durch die starke Abhängigkeit der Folgenden Komponenten.
+
+\begin{itemize}
+ 	\item View (User Interface)
+ 	\item Model (Im User Interface angezeigte Daten)
+	\item Zusammenfügender Code (Eventhandling, Abhängigkeiten, Logik)
+\end{itemize}
+
+Innerhalb des MVVM Pattern wird dieser Zusammenfügende Code als das View Model bezeichnet.
+Dessen grundlegende Aufgabe ist es, eine Trennung der View und des Models zu arrangieren und dadurch die Erstellung der Struktur  und die Wartung einer Anwendung zu vereinfachen.
+
+Sobald sich ein Wert innerhalb des View Models ändert, wir der neue Wert, mithilfe von data binding und Benachrichtigungen, automatisch im View aktualisiert.
+Wenn der Nutzer hingegen mit dem View interagiert, zum Beispiel einen Button drückt, wird eine, sich im View Model befindende Command ausgelöst, die die gewollte Aktion ausführt.
+Während dieses Prozesses modifiziert das View Model die Daten des Models, die View selbst führt nie eine direkte Änderung auf dem Model aus.
+Tatsächlich weiß die View nicht von der Existenz der Model Klasse, während das Model nicht weiß das die View existiert.
+
+Das Pattern umfasst also die drei Hauptbestandteile:
+\begin{itemize}
+ 	\item View (User Interface)
+ 	\item Model (Datenzugriffe, Modelklassen)
+	\item ViewModel (Vermittler zwischen View und Model)
+\end{itemize}
+
+Wie in \cref{fig:MVVM} zu sehen, fungiert das ViewModel als Schnittstelle zwischen dem Model und der View. Es stellt ein Data binding zwischen den beiden Instanzen bereit und verarbeitet über Commands alle Eingaben des Nutzers.
+Die View bindet ihre Kontrollwerte an Properties des ViewModels, welche im Gegenzug die Daten der Modelobjekte bereit stellen.
+
+\begin{center}
+  \includegraphics[scale=0.6]{figures/MVVM.PNG}
+  \captionof{figure}{Model-View-ViewModel (MVVM) Design Pattern}
+  \label{fig:MVVM}
+\end{center}
+
+\paragraph{CollectionViewSource}
+Die zu filternden Elemente liegen innerhalb des Projektes aktuell in Form einer CollectionViewSource vor.
 \cite{dotnetbot.}
 
 \subsection {Vorgehensweise}
+
+ICollectionView ist das Model
+public class WidgetFeaturesOverlayViewModel : OverlayDialogViewModel ist ViewMode l(mit Konstruktor für Filtertext)
+WidgetFeaturesOverlayViewModel.xaml ist der View
+
 
 CollectionViewSource.Filter
 \cite{dotnetbot.b}
