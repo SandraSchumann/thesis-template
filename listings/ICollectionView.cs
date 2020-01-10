@@ -24,7 +24,6 @@
             viewSource.View.Refresh();
             _availableWidgetFeatures = viewSource.View;
         }
-
         return _availableWidgetFeatures;
     }
 }

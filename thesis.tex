@@ -94,6 +94,7 @@
 % configure your listings style
 \usepackage{listings}
 \lstset{
+	language=csh,
 	tabsize=3,
 	extendedchars=true,
 	frame=single,
@@ -102,6 +103,7 @@
 	numberstyle=\small,
 	breakautoindent=true
 }
+\renewcommand\lstlistingname{Auflistung}
 
 % page setup
 % \setlength{\topskip}{\ht\strutbox}
@@ -163,7 +165,7 @@
 \listoftables
 \cleardoublepage
 
-\renewcommand{\lstlistlistingname}{List of Listings}  % change for German thesis
+\renewcommand{\lstlistlistingname}{Liste der Auflistungen}  % change for German thesis
 \lstlistoflistings
 \cleardoublepage
 

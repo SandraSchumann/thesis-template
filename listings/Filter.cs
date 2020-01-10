@@ -1,4 +1,3 @@
-// Filter for WidgetFeatureProperties
 private void FilterSource(object sender, FilterEventArgs e)
 {
     if (string.IsNullOrEmpty(FilterText))
@@ -10,8 +9,7 @@ private void FilterSource(object sender, FilterEventArgs e)
     var widgetFeature = e.Item as FeatureViewModel;
 
     if 
-    (widgetFeature != null &&
-     widgetFeature.Name.ToUpper().Contains(_filtertext.ToUpper()))
+    (widgetFeature.Name.ToUpper().Contains(_filtertext.ToUpper()))
     {
         e.Accepted = true;
     }

@@ -1,8 +1,7 @@
- <!--  Widget Properties Filter  -->
 <DockPanel Grid.Row="2">
     <guide:SearchBox
         Name="AvailableFeaturesFilter"
         HintText="Filter Widget features"
-        Text="{Binding Path=FilterText, Mode=TwoWay, 
-        UpdateSourceTrigger=PropertyChanged, Delay=100}"/>
+        Text="{Binding Path=FilterText,
+             UpdateSourceTrigger=PropertyChanged, Delay=100}"/>
 </DockPanel>

@@ -259,7 +259,7 @@ Dieses wird dann nach einem Klick auf den Button entsprechend angezeigt.
 \section {Implementierung Filter}
 Nach der Fertigstellung des Prototyps ist es nun noch nötig den Filter zu implementieren.
 Da hier eine direkte Umsetzung im Sourcecode von EB GUIDE geplant ist gibt es im Folgenden, nach der Formulierung der Zielsetzung,  einen groben Überblick über den Aufbau des Projektes.
-Wie bei der Erstellung des Prototypen im vorherigen Kapitel wird abschließend noch aufgezeigt mit welchem Vorgehen diese Zielsetzung umgesetzt wurde.
+Wie bei der Erstellung des Prototypen im vorherigen Kapitel wird abschließend noch aufgezeigt mit welchem Vorgehen die formulierten Ziele umgesetzt wurden.
 
 \subsection {Zielsetzung}
 Das Ziel dieses Arbeitsabschnittes ist die Umsetzung des in Abschnitt 3.1.3 definierten optischen und funktionalen Designs.
@@ -282,9 +282,9 @@ Da das Projekt Firmenintern als eine Visual Studio Solution vorliegt, werden auc
 In der Projektentwicklung wird das Model-View-ViewModel (MVVM) Design Pattern angewandt.
 Bei der früheren Entwicklung von User Interfaces, haben Entwickler häufig eine grafische View erstellt und im Nachhinein die Logik hinzugefügt.
 Dies geschieht meist in Form von Eventhandlern, Initialisierungen oder Datenmodellen im Code Behind, was zu einer starken gegenseitigen Abhängigkeit von Interface und der dahinter liegenden Logik führt.
-Dadurch entstehen Problematiken wie die Tatsache, dass nicht mehrere Entwickler gleichzeitig an der gleichen View arbeiten können, oder ein Entwickler durch seine Änderungen den Code eines anderen Entwickler unbrauchbar macht.
+Dadurch entstehen Problematiken wie die Tatsache, dass nicht mehrere Entwickler gleichzeitig an der gleichen View arbeiten können, oder gegenseitig Code unbrauchbar gemacht wird.
 Logik und Aussehen eines Interface an einer Stelle zu bündeln führt also zu schlechter Wartbarkeit, Erweiterbarkeit und ist kaum testbar\cite{.g}.
-Die aufgeführten Probleme entstehen also durch die starke Abhängigkeit der Folgenden Komponenten.
+Die aufgeführten Probleme entstehen durch die starke Abhängigkeit der Folgenden Komponenten.
 
 \begin{itemize}
  	\item View (User Interface)
@@ -292,10 +292,10 @@ Die aufgeführten Probleme entstehen also durch die starke Abhängigkeit der Fol
 	\item Zusammenfügender Code (Eventhandling, Abhängigkeiten, Logik)
 \end{itemize}
 
-Innerhalb des MVVM Pattern wird dieser Zusammenfügende Code als das View Model bezeichnet.
+Innerhalb des MVVM Pattern wird dieser zusammenfügende Code als das View Model bezeichnet.
 Dessen grundlegende Aufgabe ist es, eine Trennung der View und des Models zu arrangieren und dadurch die Erstellung der Struktur  und die Wartung einer Anwendung zu vereinfachen.
 
-Sobald sich ein Wert innerhalb des View Models ändert, wir der neue Wert, mithilfe von data binding und Benachrichtigungen, automatisch im View aktualisiert.
+Sobald sich ein Wert innerhalb des View Models ändert, wir der neue Wert, mithilfe von Data binding und Benachrichtigungen, automatisch im View aktualisiert.
 Wenn der Nutzer hingegen mit dem View interagiert, zum Beispiel einen Button drückt, wird eine, sich im View Model befindende Command ausgelöst, die die gewollte Aktion ausführt.
 Während dieses Prozesses modifiziert das View Model die Daten des Models, die View selbst führt nie eine direkte Änderung auf dem Model aus.
 Tatsächlich weiß die View nicht von der Existenz der Model Klasse, während das Model nicht weiß das die View existiert.
@@ -316,26 +316,58 @@ Die View bindet ihre Kontrollwerte an Properties des ViewModels, welche im Gegen
   \label{fig:MVVM}
 \end{center}
 
+Im aktuellen Projekt werden alle benötigten Models, meist in Form von Interfaces, in die ViewModel Klasse WidgetFeaturesOverlayViewModel importiert.
+Aufgrund des Datenschutzes ist nicht möglich die genauen Models und die vollständige Implementierung der Klasse in dieser Arbeit zu zeigen.
+Die nötigen Ergänzungen, die im folgenden Kapitel erläutert werden, werden jedoch in exakt dieser ViewModel Klasse und der dazugehörigen View WidgetFeaturesOverlayViewModel.xaml eingearbeitet werden.
+
 \paragraph{CollectionViewSource}
-Die zu filternden Elemente liegen innerhalb des Projektes aktuell in Form einer CollectionViewSource vor.
-\cite{dotnetbot.}
+Die zu filternden Elemente liegen innerhalb des Projektes bereits in Form einer CollectionViewSource vor.
+Diese besitzt die Eigenschaften View und Source, welche jeweils unterschiedliche Varianten einer Collection beinhalten können.
+Die View kann man hier als eine , über der Source liegenden Ebene verstehen, mit deren Hilfe die Darstellung der Collection manipuliert werden kann.
+Das geschieht beispielsweise durch sortieren, filtern und gruppieren von Elementen, ohne jedoch die darunter liegende Source an sich zu verändern.
+Falls die Source das Interface INotifyCollectionChanged implementiert, werden alle Änderungen, die durch das CollectionChanged event entstehen, an die View weitergeleitet.\cite{dotnetbot.}
+
+Im konkreten Fall des vorliegenden Projektes besteht die Source aus einer ObservableCollection, welche die Feature Models des aktuell ausgewählten Widgets beinhaltet.
+Eine ObservableCollection ist eine Collection dynamischer Daten, welche Benachrichtigungen für das Hinzufügen, Entfernen, oder Neuladen der Liste bereit stellt.
+\cite{dotnetbot.c}
+Aktuell wird die CollectionViewSource gruppiert und sortiert, wodurch die Einteilung in Kategorien und die alphabetische Sortierung in der View erzeugt wird.
 
 \subsection {Vorgehensweise}
+Zusätzlich zur Gruppierung und Sortierung stellt die CollectionViewSource ein Filter Event bereit.
+Diese Filter können mithilfe der View auf die Collection angewandet werden. 
+Das bedeutet konkret, dass ein Item zwar in der Collection Source existiert, mithilfe des Filterevents jedoch nur ein ausgewählter Teil dieser Collection in der View angezeigt wird.\cite{dotnetbot.b}
+Das Event kann durch das setzen eines EventHandlers genutzt werden, durch den die gewünschte Filterlogik bereitgestellt werden kann.
+Dieser Eventhandler ist in Auflistung \ref{lst:CollectionViewSource}, in den Zeilen 22 bis 23 zu sehen, die dazugehörige Filterlogik in Auflistung \ref{lst:Filter}.
 
-ICollectionView ist das Model
-public class WidgetFeaturesOverlayViewModel : OverlayDialogViewModel ist ViewMode l(mit Konstruktor für Filtertext)
-WidgetFeaturesOverlayViewModel.xaml ist der View
+\lstinputlisting[caption={CollectionViewSource()},captionpos=b, label=lst:CollectionViewSource]{listings/ICollectionView.cs}
 
+Innerhalb der Filterfunktion ist es zuerst nötig abzufragen ob der Filtertext aktuell leer ist.
+Falls dies der Fall ist, ist es nicht nötig die Features zu filtern, weshalb alle mithilfe von Accepted zurückgegeben werden.
+Sollte der Filtertext jedoch initialisiert worden sein wird jedes Item innerhalb des Events als FeatureViewModel gespeichert.
+FeatureViewModels enthalten alle relevanten Informationen über die Features.
+Dazu zählt auch deren Namen, weshalb an dieser Stelle überprüft werden kann ob die Eingabe des Nutzers einem Featurenamen entspricht, oder in diesem enthalten ist.
+Sollte dies der Fall sein wird das Feature der gefilterten View hinzugefügt, anderenfalls wird das Feature durch den Filter entfernt.
 
-CollectionViewSource.Filter
-\cite{dotnetbot.b}
+\lstinputlisting[caption={Widget Properties Filter},captionpos=b,  label=lst:Filter]{listings/Filter.cs}
 
-\lstinputlisting[language=Python ,caption={Widget Properties Filter},captionpos=b]{listings/Filter.cs}
+Die Grundstruktur des in Auflistung \ref{lst:CollectionViewSource} zu sehenden ICollectionView war im Projekt bereits vorhanden. 
+Zusätzlich zu dem eben erwähnten Filter ist noch die If Abfrage in Zeile 9 ergänzt worden.
+Diese dient dazu die ausklappbaren Kategorien verschwinden zu lassen, sobald ein Filterbegriff eingegeben wurde.
+Der zweite Teil der If Bedingung in den Zeilen 5 und 6 ist ebenfalls neu hinzugefügt worden um die Filterung in Echtzeit zu ermöglichen.
+Bis jetzt war der erste Teil der Abfrage ausreichend, da die Liste nur einmal bei der Anzeige des entsprechenden Panels aktualisiert und angelegt werden musste, nun ist das jedoch bei jeder Änderung des Filterbegriffes notwendig.
+Aus diesem Grund wird nun auch abgefragt ob der Filtertext aktuell Text enthält, damit bei jedem ChangeEvent die Liste neu gefiltert wird.
 
-\lstinputlisting[language=Python ,caption={Filter Constructor},captionpos=b]{listings/Filter_Constructor.cs}
+\lstinputlisting[caption={Filtertext Properties},captionpos=b,  label=lst:Properties]{listings/Filter_Properties.cs}
 
-\lstinputlisting[language=Python ,caption={CollectionViewSource()},captionpos=b]{listings/ICollectionView.cs}
+Ausgelöst wird dieses ChangeEvent über den in Auflistung \ref{lst:Properties} zu sehenden Setter des Filtertextes.
+Sobald eine Änderung im Textfeld registriert wird, schickt die View ein Update an das ViewModel, wodurch der Filtertext angepasst wird.
+Zusätzlich dazu  wir dem ICollectionView AvailableWidgetFeatures in Auflistung \ref{lst:CollectionViewSource} über das OnPropertyChanged Event mitgeteilt, dass die View aktualisiert werden muss.
 
-\lstinputlisting[language=XML,caption={Filterpanel in xaml},captionpos=b]{listings/Filter_Panel.xaml}
+Das Update von Seiten der View wird aufgrund des, in Auflistung \ref{lst:XAML} in Zeile5 bis 6 zu sehenden, UpdateSourceTriggers ausgelöst. 
+Hier wird über die Angabe des Paths festgelegt, dass bei jeder Änderung der TextProperty die Properties des FilterTextes aktualisiert werden.
+Zusätzlich wurde hier ein Delay von 100 eingeführt umd die Filterung in Echtzeit zu ermöglichen.
+Dieses Zeitintervall führt dazu, dass der Nutzer auch bei einer schnellen Eingabe nicht durch eine verzögerte Aktualisierung in seinem Arbeitsablauf unterbrochen  oder verlangsamt wird.
+
+\lstinputlisting[caption={Filterpanel in xaml},captionpos=b,  label=lst:XAML]{listings/Filter_Panel.xaml}
 
 
