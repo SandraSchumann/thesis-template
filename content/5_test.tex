@@ -1,10 +1,109 @@
 \chapter{Usability - Test}\label{ch:outlook}
 
-Quantitative Nutzeranforderungen formulieren.
+Aufbauend auf allen bisher getätigten Analysen und Anpassungen des Interfaces, gilt es abschließend noch den Prototypen und die Implementierung mithilfe eines Usability Tests zu evaluieren.
+Hierbei wird im Schritt "Finalize the UX design" des Human-centered design process die Rolle des Usability Testers abgedeckt, auf weitere Anpassungen in der Funktion des User Interface Designers wird verzichtet.
+
+In diesem abschließenden Kapitel werden die Grundlagen des verwendeten Tools für den Usability Test erläutert.
+Darauf folgend wird die Art des durchgeführten Tests erläutert und dargelegt auf welchen Grundlagen diese Wahl getätigt wurde.
+Aufbauend auf den theoretischen Erläuterung wird die letzendliche Testaufgabe konkret definiert und die nötigen Anweisungen, sowie die Materialien zur Auswertung der Tests erstellt.
+Abschließend werden die Ergebnisse der durchgeführten Auswertungen der Tests dargestellt und interpretiert, bevor noch ein Vergleich zwischen der bestehenden Software und den Verbesserungen gezogen wird.
 
 \section{Lookback}
-\section{Remote Usability - Test}
+
+Bei Lookback handelt es sich um eine Cloudbasierte Softwarelösung, die es ermöglicht User Experience geräteübergreifend zu dokumentieren.
+Bei der Durchführung der Tests besteht die Möglichkeit als Tester aktiv am Test teilzunehmen, oder die Probanden unmoderiert mit dem Prototyp oder der Software interagieren zu lassen.
+Möchte der Usability Tester aktiv am Test teilnehmen kann hier auch noch aus den zwei Möglichkeiten gewählt werden, sich mit dem Nutzer innerhalb einer Live-Session oder  auch persönlich vor Ort an einem Rechner zu treffen.
+
+Für die durchzuführenden Tests erstellt der Usability Tester innerhalb Loobacks ein Projekt.
+Zugunsten des Datenschutzes besteht hier die Möglichkeit die Projekte auf privat zu setzen und nur ausgewählten Personen des Teams Zugriff zu den Aufnahmen zu gewähren.
+Innerhalb des Projekteinstellungen können Instruktionen für die Nutzer bereit gestellt werden, die während des Test erscheinen und ihn durch die Aufgaben führen.
+Das ist vor allem für den Fall hilfreich, wenn die Testperson den Test alleine durchführen soll.
+
+Sollte der Test nicht persönlich stattfinden kann mithilfe eines Links kann der Test mit den Probanden geteilt werden, und der Tester bekommt eine Benachrichtigung sobald der Proband den Test alleine durchführt oder er dazustoßen kann.
+Während der Session hat der Tester die Möglichkeit mit Zeitstempel versehene Notizen zu machen oder mit eventuell teilnehmen Teamkollegen zu chatten.
+Diese Möglichkeit der Live\-Dokumentation erleichtert die folgende Auswertung des Test ungemein, da man sofort Auffälligkeiten festhalten kann und diese in der Aufzeichnung dadurch leichter auffindbar sind.
+Nach Abschluss des Tests speichert Looback die Aufnahme in der Cloud, wodurch diese für die nachträgliche Auswertung des Tests abrufbar bleibt. \cite{.10.01.2020}
+
+Die Möglichkeit der Live\-Dokumentation bildet das ausschlaggebende Argument für die Wahl des Tools, ebenfalls besteht die Möglichkeit in der hochgeladenen Aufnahme Kommentare hinzuzufügen, was die Auswertung sehr erleichtert.
+Zusätzlich ist es wichtig den Test online durchführen zu können, da viele Modellierer nicht am Hauptstandort von EB beschäftigt sind, wodurch persönliches Testen nicht immer möglich ist.
+
+\section{ Remote Usability Test}
+
+%\paragraph{Deduktive und Induktive Tests}
+%Usability Tests lassen sich grundsätzlich in deduktive und induktive Tests unterteilen.
+%Letztere dienen hierbei der formativen Evaluation und werden genutzt um Prototypen oder Vorabversionen einer Software zu analysieren.
+%Mithilfe dieser Analysen sollen vorhandene Schwachstellen aufgedeckt und Ideen für Verbesserungen gewonnen werden.
+%Üblicherweise wird bei induktiven Tests nur ein System oder Prototyp getestet.
+
+%Im Gegensatz dazu werden bei deduktiven Tests immer mehrere Alternativen einer Software miteinander verglichen, um mithilfe einer summativen Evaluation die einzelnen Systeme in ihrer Leistungsfähigkeit beurteilen zu können.
+%Ebenfalls können mit dieser Art von Test gewünschte Verbesserungen in der Entwicklung eines Systems überprüft werden.
+%Wie bei den formativen Tests ist es hier ebenfalls möglich Gestaltungs- und Verbesserungsvorschläge zu erhalten.\cite{Sarodnick.2016}
+%Da in dieser Arbeit eine bestehende und überarbeitete Software Version verglichen werden liegt hier ein deduktiver Test vor.
+
+%\paragraph{Remote und In Person Tests}
+In Person Tests finden in der Regel in einem Usability Labor statt.
+Dies bezeichnet einen abgeschlossener Raum ohne Störungsquelle, der mit aller benötigte Hard- und Software ausgestattet ist und in dem sich nur der Proband und der durchführende Tester aufhalten.
+
+Bei einem Remote Usability Test wird die Arbeitsaufgabe nicht gemeinsam im Labor, sondern räumlich getrennt durchgeführt.
+Hier lässt sich noch zwischen in Asynchronen und Synchronen Tests unterscheiden.
+Bei letzteren besteht, trotz der räumlichen Trennung, eine direkte Verbindung mithilfe von Webcam und Sprachanruf, zwischen Tester und Proband.
+Gleichzeitig dazu wird der Bildschirminhalt der Testperson übertragen, um es dem Tester zu ermöglichen dessen Interaktionen  zu verfolgen und durch den Test führen zu können.
+Durch diese direkte Verbindung ist es ebenfalls möglich während, oder unmittelbar nach dem Test Fragen zu stellen.
+Bei synchronen Tests besteht der Vorteil darin, mit geringem Aufwand sehr weit verteilte Nutzergruppen in den Test einbinden zu können.
+Zusätzlich dazu findet der Test in der gewohnten Umgebung des Nutzers statt, es wird also keine ungewohnte Situation in einem Labor geschaffen, was die Nervosität der Nutzer eventuell steigern könnte.
+Auch können die Probanden hier mit ihrer gewohnten Hard- und Software arbeiten, was vor allem für repräsentative Werte die die Effizienz betreffen von Vorteil ist.
+Durch den Umstand der gewohnten Arbeitsumgebung entsteht jedoch in vielen Fällen auch ein technische Zusatzaufwand auf Seiten des Nutzers.
+So kann es beispielsweise nötig werden sich Headset und Webcam anzuschaffen, oder zusätzliche Software auf dem Arbeitsgerät installieren zu müssen.
+Dies tritt in einem Usability Labor nie auf, da hier eine einmalige Einrichtung der benötigten Hard- und Software stattfindet die exakt au den geplanten Test ausgelegt ist.
+
+Im Rahmen eines asynchronen Tests besteht zusätzlich zu der räumlichen, auch noch eine zeitliche Trennung von Proband und Tester.
+Identisch zum synchronen Test werden hier Gesicht und Bildschirminhalt der Testperson aufgezeichnet, der Nutzer kann jedoch aufgrund der Unabhängigkeit den Test zu einer ihm passenden Zeit durchführen.
+Da er dadurch jedoch auch auf sich allein gestellt ist, empfiehlt es sich zusätzliche Kommentare und Fragebögen in den Test einzubauen um die direkte Befragung und Hilfestellung des synchronen Tests zu ersetzen.
+Wie bei der synchronen Variante betseht hier der Vorteil das mit geringem Aufwand großräumig verteilte Nutzergruppen eingebunden werden können.
+Zusätzlich können durch die vollautomatische Erfassung in dieser Variante auch sehr große Nutzergruppen effizient evaluiert werden.
+Allerdings einstehen durch die zeitliche Trennung die NAchteile, das abgesehen von der Aufnahme keine Beobachtungsdaten existieren.
+Es kann also beispielsweise nicht darum gebeten werden etwas genauer zu erläutern oder einen anderen Lösungsweg zu versuchen.
+Die wohl größte Problematik bildet jedoch die Tatsache, dass nicht auf unerwartete Handlungen des Nutzers reagiert werden kann, was vor allem bei nur teilweise funktionalen Prototypen fatal sein kann.
+Versuchen die Probanden hier einen Lösungsweg einzuschlagen, der in der vorliegenden Softwareversion nicht implementiert ist und auch nicht bedachte wurde, bekommt die Testperson eventuell auf keine Art und Weise eine Rückmeldung des Systems.
+Diese Tatsache kann ohne weitere Unterstützung durch den Tester eventuell zum Abbruch des Test führen, was zu Unzufriedenheit auf Seiten des Testers und Nutzers führt.\cite{Sarodnick.2016}
+
+Da Lookback jeden der eben erläuterten Tests unterstützt, wirkt sich das Tool auch nicht einschränkend aus und die Wahl kann aufgrund tatsächlich relevanter Tatsachen getroffen werden.
+Aufgrund der Tatsache das innerhalb der Testaufgabe mit einem Prototyp interagiert werden muss, ist ein synchroner Test dem asynchronen vorzuziehen.
+Da nicht alle in Guide zur Verfügung stehenden Interaktionsmöglichkeiten simuliert, und die Funktion \glqq publish to template interface\grqq{} verlagert wurde ist es wahrscheinlich, dass die Probanden an gewissen Punkten Unterstützung benötigen.
+Es ist auch zu erwarten das bei den neuen Funktionen Fragen bei den Testpersonen auftauchen werden, die nicht alle in der Arbeitsaufgabe beantwortet werden können.
+Im Gegensatz dazu wird auch Tester einige Aktionen genauer hinterfragen wollen oder herausfinden wollen warum gewisse Aktionen nicht durchgeführt wurden.
+
+Grundlegend ist ein Test im Usability Labor, aufgrund der Ungestörtheit, immer dem Remote Test vorzuziehen.
+Zum einen erstreckt sich die Nutzergruppe für diese Arbeit  jedoch über mehrere Firmenstandorte von Elektrobit, weshalb es nicht möglich ist den Test mit allen Probanden in einem Labor durchzuführen.
+Zum anderen soll mithilfe Tests überprüft werden ob eine Effizienzsteigerung erzielt werden konnte.
+Die Ausstattung in den Laboren entspricht nie hundertprozentig der gewohnten Umgebung, weshalb hier auch langsamere Leistungen aufgrund der fremden Hardware erbracht werden können.
+Es wäre möglich die Tests mit einem Teil der Probanden im Labor und mit dem anderen Remote durchzuführen, um die Ergebnisse jedoch so gut vergleichbar wie möglich zu halten werden alle Untersuchungen unter den gleichen Bedingungen in einem Remote Test durchgeführt.
+
 \section{Arbeitsaufgaben}
-\section{Ergebnisse altes Interface}
-\section{Ergebnisse überarbeitetes Interface}
-\section{Vergleich}
+
+Quantitative Nutzeranforderungen formulieren.
+
+Subtasks erstellen
+
+Modellieren eines Startscreens
+ERstellen von zwei Arbeistaufgaben für die Anpassungen
+	einmal neue Suchleiste in Guide
+		Beispielprojket bereitstellen
+	zweitens Änderungen im Prototyp
+
+Erstellen noch einer Arbeistaufgabe für die vergleichenden Tests in Guide
+	ebenfalls Beispielprojekt bereit stellen
+
+Umsetzung durch den Nutzer mithilfe von:
+	grafischer Styleguide
+	Textuelle Angabe für den Usability Test
+	Unterschiedlich je nachdem ob Prototyp oder altes Verhalten evaluiert werden soll
+
+\section {Durchführung}
+Test fand mit 10 Testpersonen statt, Vergleich der Effizienz \cite{.h}
+
+
+\section {Ergebnisse}
+\paragraph{Ergebnisse altes Interface}
+\paragraph{Ergebnisse überarbeitetes Interface}
+\paragraph{Vergleich}
