@@ -1,4 +1,4 @@
-\chapter{Usability - Test}\label{ch:outlook}
+\chapter{Usability Test}\label{ch:outlook}
 
 Aufbauend auf allen bisher getätigten Analysen und Anpassungen des Interfaces, gilt es abschließend noch den Prototypen und die Implementierung mithilfe eines Usability Tests zu evaluieren.
 Hierbei wird im Schritt "Finalize the UX design" des Human-centered design process die Rolle des Usability Testers abgedeckt, auf weitere Anpassungen in der Funktion des User Interface Designers wird verzichtet.
@@ -81,29 +81,105 @@ Es wäre möglich die Tests mit einem Teil der Probanden im Labor und mit dem an
 
 \section{Arbeitsaufgaben}
 
-Quantitative Nutzeranforderungen formulieren.
+Um in der abschließenden Arbeitsaufgabe alle Änderungen testen zu können ist es nötig sich an den ursprünglich analysierten Benutzeranforderungen zu orientieren, auf deren Grundlage die Änderungen entworfen und der Prototyp gebaut wurde.
+Daher werden zu den in Kapitel 3.0.3. bereits formulierten qualitativen Anforderungen nun noch die, im Rahmen eines Tests messbaren, quantitative Nutzeranforderungen für die ausgewählten Anpassungen ergänzt.
 
-Subtasks erstellen
+\textbf{Quantitative Benutzeranforderung für Template Properties}\newline
+\textbf{Messung der Effizienz:}
+Nutzer, die die Funktion \glqq publish to template interface\grqq{} über einen Linksklick auf den Kreis ausführen, sollen messbar schneller sein, als Nutzer die dies über einen Rechtsklick auf das Quadrat tun. \newline
+\textbf{Messung der Fehlerrate:} 
+Nutzer, die die Funktion \glqq publish to template interface\grqq{} über einen Linksklick auf den Kreis ausführen, sollen eine niedrigerer Fehlerrate aufweisen, als Nutzer die dies über einen Rechtsklick auf das Quadrat tun.
 
-Modellieren eines Startscreens
-ERstellen von zwei Arbeistaufgaben für die Anpassungen
-	einmal neue Suchleiste in Guide
-		Beispielprojket bereitstellen
-	zweitens Änderungen im Prototyp
+\textbf{Quantitative Benutzeranforderung für Widget Feature Properties} \newline
+\textbf{Messung der Effizienz:}
+Nutzer, die die Filterfunktion nutzen, sollen schneller ihr gewünschtes Widget Feature Property finden als Nutzer die dies händische suchen müssen. \newline
+\textbf{Messung der Fehlerrate:}
+Bei Nutzern, die die Filterfunktion nutzen soll die Fehlerrate sich auf null reduzieren.
 
-Erstellen noch einer Arbeistaufgabe für die vergleichenden Tests in Guide
-	ebenfalls Beispielprojekt bereit stellen
+\textbf{Quantitative Benutzeranforderung für Mehrfachselektion}\newline
+\textbf{Messung der Effizienz:}Nutzer die mehrere Objekte gleichzeitig selektiert haben, sollen deren korrekte Positionierung schneller abgeschlossen haben,als Nutzer die keine Mehrfachselektion benutzen können.\newline
+Da Fehler bei der Positionierung und Skalierung von Objekten meist durch falsche Interpretation der Spezifikation entstehen, und dies nicht durch Änderungen innerhalb des Interfaces behoben oder verbessert werden kann, wird in diesem Fall von der Messung der Fehlerrate abgesehen.
 
-Umsetzung durch den Nutzer mithilfe von:
-	grafischer Styleguide
-	Textuelle Angabe für den Usability Test
-	Unterschiedlich je nachdem ob Prototyp oder altes Verhalten evaluiert werden soll
+Aus den aufgeführten Benutzeranforderungen lassen sich wiederum Subtask ableiten, anhand deren überprüft werden kann welche Interaktionen von Seiten des Nutzers in welcher Zeitspanne abgeschlossen werden, an welcher Stelle Fehler auftreten und welche Möglichkeiten nicht genutzt werden.
+Hierfür ist es notwendig jede Interaktion in kleine Subtasks zu untergliedern um beispielsweise genau die Stelle festzustellen zu können an der die Interaktion mit dem Interface zu Fehlern führt.
+Bei der Filterung der Feature Widget Properties kann dies eventuell schon daran scheitern das nicht in das Texteingabefeld geklickt wird, oder auch erst durch die Eingabe eines falschen Filterbegriffes.
+Die formulierten Subtasks für den in dieser Arbeit durchgeführten Test lassen sich in Anhang \ref{app:Subtasks} nachvollziehen.
 
-\section {Durchführung}
-Test fand mit 10 Testpersonen statt, Vergleich der Effizienz \cite{.h}
+Auf Grundlage dieser Subtasks beurteilt, scheint es weiterhin sinnvoll den Testpersonen die Modellierung einen Startscreens für ein Human Machine Interface der Automobilbranche als Testaufgabe ausführen zu lassen.
+Hierfür ist es notwendig einen grafischen Styleguide zu erstellen an dem sich die Nutzer wie aus ihrer täglichen Arbeit gewohnt orientieren können.
+Darüber hinaus ist es auch für Evaluierung der Tests notwendig die Nutzer die exakt gleichen Aufgaben durchführen zu lassen.
+Der in \cref{fig:Styleguide} zu sehende Styleguide zeigt einen Startscreen mit drei Bildern und Bildunterschriften im Hauptmenü und zwei Bildern in der Fast-Access-Leiste.
+Für jedes dieser Elemente sind die für den Modellierer relevanten Properties sichtbar, sowie bei den Bildern die Namen wie sie auch in den Assets von EB GUIDE auftauchen.
+Diese Anmerkungen sind innerhalb des Styleguides alle in pink gehalten um sie deutlich vom tatsächlichen Design abzugrenzen, wobei die Rahmen für das Hauptmenü und die Fast-Access Leiste ebenfalls der Orientierung dienen und zum Verständnis der im folgenden beschriebenen Arbeitsaufgabe notwendig sind.
+
+\begin{center}
+  \includegraphics[width=\textwidth]{figures/Styleguide_Rahmen.png}
+  \captionof{figure}{Styleguide}
+  \label{fig:Styleguide}
+\end{center}
+
+Zusätzliche zu dieser grafischen Darstellung der Arbeitsaufgabe, wird noch eine textuelle Angabe erstellt, die zur Durchführung des Tests nötig ist.
+Es werden insgesamt drei verschiedene Angaben erstellt, die in den Anhängen \ref{app:Aufgabe_Filter}, \ref{app:Aufgabe_Prototyp} und \ref{app:Aufgabe_Guide} zu finden sind.
+Die ersten beiden dienen hierbei der Überprüfungen der Anpassungen.
+Da ein Teil hiervon implementiert und der andere Teil mithilfe eines Prototypen umgesetzt wurde ist es hier nötig den Test in zwei Teile aufzuspalten, weshalb auch zwei getrennte Angaben existieren.
+In Testaufgabe \ref{app:Aufgabe_Filter} galt es den implementierten Filter zu überprüfen, weshalb die Nutzer hier aufgefordert werden die drei Bilder für das Hauptmenü zu platzieren und mit Widget Feature Properties zu versehen.
+Für diesen ersten Teil wird den Nutzern ein vorbereitetes Projekt mit den benötigten Assets zur Verfügung gestellt, um zu gewährleisten das alle mit einer identischen Ausgangssituation starten.
+Es wird hier explizit nicht auf die implementierte Änderungen hingewiesen, da überprüft werden soll ob diese von den Nutzern intuitiv benutzt wird.
+Um jedoch zu gewährleisten, dass jeder Nutzer das Filterfeld theoretisch nutzen könnte wird darum geben die Bilder mit Widget Feature Properties zu versehen.
+
+Für Aufgabe \ref{app:Aufgabe_Prototyp} ist es notwendig den Übergang zu der Aufgabe innerhalb des Prototyp so nahtlos wie möglich zu gestalten und gleichzeitig wieder eine identische Ausgangssituation für alle Nutzer zu schaffen.
+Das initiale Aussehen des Prototyp beinhaltet deshalb bereits die die drei bereits eingefügten Bilder im Hauptmenü, entspricht also der Situation mit der das vorherige Projekt in Guide von den Testpersonen verlassen wurde.
+Da die Multiselektion eine Neuerung ist die eher unwahrscheinlich selbstständig von den Nutzern entdeckt wird, wird hier zu Anfang darauf hingewiesen das der vorliegende Prototyp Multiselektion unterstützt.
+Mithilfe der Fast-Access Leiste, welche mithilfe von Templates modelliert werden soll, wird die Verlagerung der Funktion \glqq publish to template interface\grqq{} überprüft.
+Ebenfalls wird in diesem Zug darauf hingewiesen, das nun auch die Bilder mithilfe von Multiselektion in Templates eingefügt werden können, jedoch ohne genaue Erklärung auf welche Art und Weise das funktioniert.
+Abschließend sollen noch die Bilder und Labels positioniert und skaliert werden.
+Es wird hier nocht noch einmal explizit auf die Multiselektion verwiesen, da herausgefunden werden soll inwiefern die Probanden dies nach der Information zu Anfang der Angabe intuitiv für die restliche Aufgabe nutzen.
+
+Die letzte Aufgabe \ref{app:Aufgabe_Guide} dient zur Erlangung der Vergleichswerte für die Effizienz und wird deshalb in der unmodifizierten Version von Guide umgesetzt.
+Da hier deshalb kein Übergang in den Prototyp notwendig ist ist eine zusammenhängende Arbeitsaufgabe ausreichend.
+Die Probanden müssen hier die identische Aufgabe durchführen und werden, angepasst an die beiden vorherigen Angaben, in der Nutzung von Templates eingeschränkt oder dazu aufgefordert.
+Den Nutzern hier ein komplett freies Arbeiten ist nicht möglich, da möglichst identische Arbeitsschritte getätigt werden müssen um einen validen Vergleich anstellen zu können.
 
 
 \section {Ergebnisse}
+Test fand mit 10 Testpersonen statt, Vergleich der Effizienz \cite{.h}
+
 \paragraph{Ergebnisse altes Interface}
+Filter: Bei 3 von 5 Probanden benutzt, Durchschnitt 2 Sekunden
+Fehlerrate: 2 von 5 Nutzern ein Fehler
+
+Publish: 3 von 5 Probanden gefunden, alle in 4,6 sek verlinkt
+von 2 anderen nicht entdeckt, jedoch als Nützlich eingestuft
+nachdem allen Hotspot erklärt wurde, Fehlerrate von 0
+
+Multiselektion:
+Bilder:
+	Skalieren:
+		Alle zusammen: 5 Nutzer in durch. 7,2 sek
+
+	Positionieren:
+		Mit Alignment: 1 Person in 5 sek
+			Nutzungsfehler, sonst schneller
+		Alle zusammen: 4 Personen in durch 3,5 sek
+			identische Koordianten zusammen anpassen, danach einzelne Bilder wählen und anpassen
+			Alignment entweder nicht gesehen oder als nicht relevant betrachtet
+
+Texte:
+	Skalieren:
+		Alle zusammen: 4 Nutzer in durch. 8 sek
+
+	Positionieren:
+		Alignment an Bildern: Niemand
+			Alignment ohnehin neu, kombi aus verschiedenen Elementen zu verwirrend
+		
+		Mit Alignment: 2 Personen in durch. 6 sek
+			Erneut gleicher Fehler, deshalb längere Dauer
+		Alle zusammen: 3 Personen in durch. 4,6 sek
+			Gründe wie bei Bildern
+
+
+Insert in Template: Niemand benutzt, wird als nicht intuitiv gewertet
+
+
 \paragraph{Ergebnisse überarbeitetes Interface}
 \paragraph{Vergleich}
