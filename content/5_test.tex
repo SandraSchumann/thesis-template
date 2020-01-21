@@ -1,7 +1,7 @@
 \chapter{Usability Test}\label{ch:outlook}
 
 Aufbauend auf allen bisher getätigten Analysen und Anpassungen des Interfaces, gilt es abschließend noch den Prototypen und die Implementierung mithilfe eines Usability Tests zu evaluieren.
-Hierbei wird im Schritt "Finalize the UX design" des Human-centered design process die Rolle des Usability Testers abgedeckt, auf weitere Anpassungen in der Funktion des User Interface Designers wird verzichtet.
+Hierbei wird im Schritt "Finalize the UX design" des Human-Centered Design Process die Rolle des Usability Testers abgedeckt, auf weitere Anpassungen in der Funktion des User Interface Designers wird verzichtet.
 
 In diesem abschließenden Kapitel werden die Grundlagen des verwendeten Tools für den Usability Test erläutert.
 Darauf folgend wird die Art des durchgeführten Tests erläutert und dargelegt auf welchen Grundlagen diese Wahl getätigt wurde.
@@ -94,11 +94,14 @@ Nutzer, die die Funktion \glqq publish to template interface\grqq{} über einen 
 \textbf{Messung der Effizienz:}
 Nutzer, die die Filterfunktion nutzen, sollen schneller ihr gewünschtes Widget Feature Property finden als Nutzer die dies händische suchen müssen. \newline
 \textbf{Messung der Fehlerrate:}
-Bei Nutzern, die die Filterfunktion nutzen soll die Fehlerrate sich auf null reduzieren.
+Bei Nutzern, die die Filterfunktion nutzen soll die Fehlerrate sich bei der Suche nach dem gewünschten Widget Feature Property auf auf null reduzieren.
 
 \textbf{Quantitative Benutzeranforderung für Mehrfachselektion}\newline
-\textbf{Messung der Effizienz:}Nutzer die mehrere Objekte gleichzeitig selektiert haben, sollen deren korrekte Positionierung schneller abgeschlossen haben,als Nutzer die keine Mehrfachselektion benutzen können.\newline
-Da Fehler bei der Positionierung und Skalierung von Objekten meist durch falsche Interpretation der Spezifikation entstehen, und dies nicht durch Änderungen innerhalb des Interfaces behoben oder verbessert werden kann, wird in diesem Fall von der Messung der Fehlerrate abgesehen.
+\textbf{Messung der Effizienz:}
+Nutzer die mehrere Objekte gleichzeitig selektiert haben, sollen deren korrekte Positionierung  und Skalierung schneller abgeschlossen haben, als Nutzer die keine Mehrfachselektion benutzen.\newline
+\textbf{Messung der Fehlerrate:}
+Nutzer, die Objekte mithilfe der Mehrfachselektion skalieren oder positionieren, sollen diesen Vorgang mit einer geringeren Fehlerrate abschließen, als Nutzer die keine Mehrfachselektion nutzen.
+Zusätzlich wird hier darauf geachtet inwiefern die Ergänzungen genutzt werden, vor allem die neu eingeführten \glqq Alignment Actions\grqq{} und die Funktion \glqq Insert in Template\grqq{} und welche Verbesserungen hier noch einzubringen sind.
 
 Aus den aufgeführten Benutzeranforderungen lassen sich wiederum Subtask ableiten, anhand deren überprüft werden kann welche Interaktionen von Seiten des Nutzers in welcher Zeitspanne abgeschlossen werden, an welcher Stelle Fehler auftreten und welche Möglichkeiten nicht genutzt werden.
 Hierfür ist es notwendig jede Interaktion in kleine Subtasks zu untergliedern um beispielsweise genau die Stelle festzustellen zu können an der die Interaktion mit dem Interface zu Fehlern führt.
@@ -140,13 +143,12 @@ Da hier deshalb kein Übergang in den Prototyp notwendig ist ist eine zusammenh�
 Die Probanden müssen hier die identische Aufgabe durchführen und werden, angepasst an die beiden vorherigen Angaben, in der Nutzung von Templates eingeschränkt oder dazu aufgefordert.
 Den Nutzern hier ein komplett freies Arbeiten ist nicht möglich, da möglichst identische Arbeitsschritte getätigt werden müssen um einen validen Vergleich anstellen zu können.
 
-
 \section {Ergebnisse}
 Test fand mit 10 Testpersonen statt, Vergleich der Effizienz \cite{.h}
 
-\paragraph{Ergebnisse altes Interface}
+\paragraph{Ergebnisse neuen Interface}
 Filter: Bei 3 von 5 Probanden benutzt, Durchschnitt 2 Sekunden
-Fehlerrate: 2 von 5 Nutzern ein Fehler
+Fehlerrate: 2 von 5 Nutzern ein Fehler -> Scaling statt Scale Mode
 
 Publish: 3 von 5 Probanden gefunden, alle in 4,6 sek verlinkt
 von 2 anderen nicht entdeckt, jedoch als Nützlich eingestuft
@@ -156,30 +158,75 @@ Multiselektion:
 Bilder:
 	Skalieren:
 		Alle zusammen: 5 Nutzer in durch. 7,2 sek
+		Fehler: 0
 
 	Positionieren:
 		Mit Alignment: 1 Person in 5 sek
-			Nutzungsfehler, sonst schneller
+			Nutzungsfehler, sonst schneller -> alle ausgewählt zur Positionierung des Ankers
+			Fehler: 1 Person Textfeld unklar
+				 Alignment zuerst angegeben, dann Ankerbild erst positioniert, erneut Alignment eingeben
+			Überwiegend als sinnvoll eingestuft
+
 		Alle zusammen: 4 Personen in durch 3,5 sek
 			identische Koordianten zusammen anpassen, danach einzelne Bilder wählen und anpassen
 			Alignment entweder nicht gesehen oder als nicht relevant betrachtet
+			0 Fehler
 
 Texte:
 	Skalieren:
 		Alle zusammen: 4 Nutzer in durch. 8 sek
+		Fehler: 0
 
 	Positionieren:
 		Alignment an Bildern: Niemand
 			Alignment ohnehin neu, kombi aus verschiedenen Elementen zu verwirrend
 		
 		Mit Alignment: 2 Personen in durch. 6 sek
-			Erneut gleicher Fehler, deshalb längere Dauer
+			Fehler: Alignment zuerst angegeben, dann Ankerbild erst positioniert, erneut Alignment eingeben
 		Alle zusammen: 3 Personen in durch. 4,6 sek
 			Gründe wie bei Bildern
+		0 Fehler
 
 
 Insert in Template: Niemand benutzt, wird als nicht intuitiv gewertet
 
-
 \paragraph{Ergebnisse überarbeitetes Interface}
-\paragraph{Vergleich}
+Filter: 5 Probanden in durch. 8.8 sek
+Fehlerrate: 2 Nutzer 2 Fehler, 1 Nutze 3 Fehler
+
+Publish: 5 Probanden in durch. 16 sek
+Fehlerrate: 1 Person 1 Fehler, jedoch immer kurzes Zögern was angewählt werden muss.
+
+Bilder:
+	Skalieren:
+		Alle zusammen: 5 Nutzer in durch. 4,8 sek und Bilder werden kopiert
+		Fehler: Neustart bei kompliziertem Ansatz mit Datapoolitems, sonst 0
+
+	Positionieren:
+		Zeit: alle in durch. 8,5 sek
+		Fehler: Neustart bei kompliziertem Ansatz mit Datapoolitems, sonst 0
+
+Texte:
+	Skalieren:
+		Alle zusammen: 9 sek
+		Fehler: 0
+
+	Positionieren:
+		Zeit: alle in durch. 10,8 sek
+		Fehler: 0
+
+
+\paragraph{Interpretation}
+Filter verschnellert deutlich, es treten jedoch Fehler aufgrund der Tatsache auf das die Kategorien verschwinden.
+Vielleicht doch weiterhin sichtbar, jedoch alle ausklappen wenn man filtert?
+
+Puplish to interface:
+Neuerung nicht von allen gefunden, wurde jedoch Nach Aufklörung als inutitiv empfunden
+Fehlerrate bei 0, vorher macnhmal klick daneben, und längeres Lesen welche Option ausgewählt werden muss.
+Auf jeden Fall deutliche Verschnellerung
+Jedoch für neue Nutzer Kombi aus beiden nötig, da Erklärung der Funktion nötig ist.
+
+Multiselektion:
+ Insert in Template als nicht intuitiv, keine weitere Verfolgung
+
+
