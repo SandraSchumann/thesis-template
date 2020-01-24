@@ -1,7 +1,7 @@
 \chapter{Theorie}\label{ch:data}
 Um die folgenden Analysen und Umsetzungen in dieser Arbeit verstehen zu können, ist es notwendig einen Überblick über elementare Begriffe und Methoden der Usability zu haben.
 Aus diesem Grund werden diese im Folgenden, zusammen mit einigen Gestaltprinzipien, die es bei dem Entwurf eines Designs zu berücksichtigen gibt erläutert.
-Abschließend gibt es noch einen Überblick über den grundlegenden Aufbau und die Funktionen der Software EB Guide, für die im Rahmen dieser Arbeit die Usability untersucht und verbessert werden soll.
+Abschließend gibt es noch einen Überblick über den grundlegenden Aufbau und die Funktionen der Software EB GUIDE, für die im Rahmen dieser Arbeit die Usability untersucht und verbessert werden soll.
 
 \section{Grafische Benutzeroberfläche}
 Der Begriff Benutzerschnittstelle bezeichnet alle Komponenten eines interaktiven Systems, die dem Benutzer Interaktionsmöglichkeiten mit selbigem System bieten, um ein verfolgtes Ziel zu erreichen.
@@ -9,7 +9,7 @@ Die grafische Benutzeroberfläche (GUI) bezeichnet hierbei den sichtbaren Anteil
 Heutzutage sind die meisten Benutzeroberflächen auch grafische Benutzeroberflächen, mit denen in den häufigsten Fällen die Interaktion mit dem Nutzer über direkte Manipulation stattfindet\cite{Nielsen.1995?}.
 
 \section{Ergonomie}
-Unter Ergonomie versteht man im Allgemeinen die \glqq Lehre von der menschlichen Arbeit und die Erkenntnis ihrer Gesetzmäßigkeiten\grqq{} \cite{https:www.facebook.comArbeitsplatzergonomie.2014}.
+Unter Ergonomie versteht man im Allgemeinen die \glqq Lehre von der menschlichen Arbeit und die Erkenntnis ihrer Gesetzmäßigkeiten\grqq{} \cite{Bullinger.1994}.
 Hierbei ist es wichtig zu verstehen, dass dabei der Fokus nicht ausschließlich auf einer technischen Komponente liegt, sondern das Zusammenspiel von Mensch, der zugeteilten Aufgabe und den verfügbaren Werkzeugen betrachtet wird\cite{Sarodnick.2016}.
 In Bezug auf Software bedeutet Ergonomie also konkret diese gut handhabbar und benutzerorientiert zu gestalten.
 
@@ -75,7 +75,7 @@ Eine andere Methode die Zufriedenheit zu messen, ist es, die Nutzer einfach dire
 Da man eine objektive Einschätzung der Zufriedenheit der Nutzer erhalten will, ist es hier natürlich nötig mehrere Nutzer zu befragen, um aus den einzelnen subjektiven Meinungen eine objektive Meinung zu erhalten.
 Diese Befragung findet meist in Form eines Fragebogens statt, da diese recht komplexe Art der Evaluierung in dieser Arbeit jedoch keine Verwendung findet, werden die Vorgehensweisen an dieser Stelle nicht weiter erläutert.
 
-Da es sich bei der in dieser Arbeit untersuchten Software EB Guide Studio, näheres hierzu in Abschnitt 2.8, um eine Anwendung handelt mit der die meisten Nutzer über einen längeren Zeitraum auf hohem Niveau arbeiten, wird in dieser Usabilitystudie hauptsächlich das Attribut der Effizienz untersucht. Ergänzend dazu wird noch dokumentiert wie viele Fehler bei dem Nutzer durch die neuen Ergänzungen im Interface entstehen. Genaueres zu den Untersuchungen und Messungen folgt in Kapitel 5 dieser Arbeit.
+Da es sich bei der in dieser Arbeit untersuchten Software EB GUIDE Studio, näheres hierzu in Abschnitt 2.8, um eine Anwendung handelt mit der die meisten Nutzer über einen längeren Zeitraum auf hohem Niveau arbeiten, wird in dieser Usabilitystudie hauptsächlich das Attribut der Effizienz untersucht. Ergänzend dazu wird noch dokumentiert wie viele Fehler bei dem Nutzer durch die neuen Ergänzungen im Interface entstehen. Genaueres zu den Untersuchungen und Messungen folgt in Kapitel 5 dieser Arbeit.
 
 \section{User Experience}
 Entgegen einer häufigen Annahme bezeichnen Usability und User Experience (UX) nicht das Gleiche.
@@ -90,14 +90,21 @@ Sobald es mehr als ein Produkt zur Lösung der gleichen Aufgabenstellung gibt, w
 
 \begin{figure}[H]
 \begin{center}
-  \includegraphics[scale=0.6]{figures/UX.png}
+  \includegraphics[scale=0.5]{figures/UX2.png}
   \caption{Zusammenhang Usability und User Experience (nach \cite{Sarodnick.2016})}
   \label{fig:UX}
 \end{center}
 \end{figure}
 
 \section{Kognitive Last}
-Die Kognitive Last – auch als mentale Auslastung bekannt – bezeichnet im Allgemeinen die Differenz zwischen den Ressourcen (kognitiv, psychomotorisch oder wahrnehmend) die benötigt werden, um eine Aufgabe zu erfüllen, und den tatsächlich zur Verfügung stehenden Ressourcen. Die Größe der kognitiven Last beeinflusst also direkt die Leistung, die wir bei der Ausführung einer bestimmten Aufgabe erbringen können. Bei einer optimalen Auslastung erbringen Menschen maximale Leistung, ist sie hingegen zu klein oder zu groß geht die Leistung zurück, was in einem Fall auf Unterforderung und damit einhergehende Langweile, im anderen Fall auf Überlastung und Ablenkung zurückzuführen ist\cite{.e}. Beim Führen eines Fahrzeuges ist die Leistung des Fahrers beispielsweise maximal, wenn seine gesamte Aufmerksamkeit dem Fahren gilt. Allerdings wird er durch Nebentätigkeiten, wie zum Beispiel das Reagieren auf Warnungen, dazu gezwungen sein mehrere Aktivitäten gleichzeitig durchzuführen (Multitasking bzw. Mehrfachaufgabenperformanz), was seine Performance in Bezug auf beide Tätigkeiten einschränken wird. Es ist also auch wichtig abzuwägen, wie man Warnungen in Benutzeroberflächen darstellt, um keine mentale Überlastung des Benutzers hervorzurufen. Beim Fahren ist beispielsweise die visuelle Modalität durch den ständigen Blick auf die Straße bereits sehr ausgelastet, weshalb zur Darstellung von Warnung auch aus Gründen der Auslastung auf Warnhinweise in Form von Videos oder Animationen verzichtet werden sollte und eher auf die anderen Modalitäten des Menschen, wie Hören und Fühlen ausgelagert werden.
+Die Kognitive Last – auch als mentale Auslastung bekannt – bezeichnet im Allgemeinen die Differenz zwischen den Ressourcen (kognitiv, psychomotorisch oder wahrnehmend) die benötigt werden, um eine Aufgabe zu erfüllen, und den tatsächlich zur Verfügung stehenden Ressourcen. Die Größe der kognitiven Last beeinflusst also direkt die Leistung, die wir bei der Ausführung einer bestimmten Aufgabe erbringen können. Bei einer optimalen Auslastung erbringen Menschen maximale Leistung, ist sie hingegen zu klein oder zu groß geht die Leistung zurück, was in einem Fall auf Unterforderung und damit einhergehende Langweile, im anderen Fall auf Überlastung und Ablenkung zurückzuführen ist\cite{Miucic.2019}. 
+Kann der Nutzer sich nur auf eine, fordernde Tätigkeit konzentrieren erreicht er das Maximum seiner Leistungsfähigkeit.
+Ist er jedoch gezwungen sich auf mehrere Aktivitäten oder Umgebungsreize - beispielsweise Warnungen - gleichzeitig zu konzentrieren (Multitasking bzw. Mehrfachaufgabenperformanz), ist seine Performance in Bezug auf beide Tätigkeiten einschränkt.
+Beim Führen eines Fahrzeuges ist die Leistung des Fahrers beispielsweise maximal, wenn seine gesamte Aufmerksamkeit dem Fahren gilt.
+Muss er sich jedoch zeitgleich noch auf Warnungen des Autos konzentrieren, wird seine Leistung bei der Wahrnehmung beider Einflüsse verringert.
+Auch ist beim Fahren die visuelle Modalität durch den ständigen Blick auf die Straße bereits sehr ausgelastet, weshalb zur Darstellung von Warnung auch aus Gründen der Auslastung auf Warnhinweise in Form von Videos oder Animationen verzichtet werden sollte und eher auf die anderen Modalitäten des Menschen, wie Hören und Fühlen ausgelagert werden.
+Dieses Phänomen lässt von der Situation der Benutzeroberflächen im Auto auf alle HMI's übertragen.
+Es ist also wichtig abzuwägen, wie man Warnungen in Benutzeroberflächen darstellt, um keine mentale Überlastung des Benutzers hervorzurufen. 
 
 \section{Human - Centered  Design Process}
 Human-Centered Design ist ein Ansatz zur Entwicklung interaktiver Systeme, welcher das Ziel verfolgt möglichst nützliche Systeme zu entwickeln und diese gut benutzbar zu machen.
@@ -105,10 +112,10 @@ Das wird vor allem durch das fokussieren auf den Benutzer und dessen Bedürfniss
 Der in \cref{fig:HCD} zu sehende User Experience Engineering Process beschreibt den Human Centered Design Process für Elektrobit und basiert auf der ISO Norm 9241 - 210.
 Das Model sieht Iterationen benutzerorientierter Aktivitäten vor, durch die fortlaufend der Erkenntnisstand der Entwickler erhöht wird, was bei dem ursprünglichen Ansatz eines Wasserfallmodells nicht der Fall war, bei dem stufenweise von Planung nach Durchführung vorgegangen wird, nicht der Fall war.
 
-\begin{figure}[H]
+\begin{figure}
 \begin{center}
-  \includegraphics[width=\textwidth]{figures/HCD.png}
-  \caption{Human - Centered - Design - Process bei Elektrobit}
+  \includegraphics[width=0.9\textwidth]{figures/HCD.png}
+  \caption{Human - Centered Design - Process bei Elektrobit}
   \label{fig:HCD}
 \end{center}
 \end{figure}
@@ -163,18 +170,37 @@ Das macht es zu dem wichtigsten Prinzip für hohe Usability in komplexen Systeme
 Häufig wird versucht alle möglichen Optionen, die ein System bietet sichtbar zu machen, was vor allem in komplexeren Systemen dazu führt, dass die relevanten Optionen durch Informationsüberladung auf Seiten des Nutzers schwerer zu erreichen sind. 
 Anstatt die Usabilty zu erhöhen wird also genau das Gegenteil erzielt.
 Lösungen für diese Problemstellung sind beispielsweise eine hierarchische Anordnung der Elemente oder Kontextsensitivität des Systems.
-Bei der Hierarchischen Anordnung werden Funktionen und Informationen in logische Kategorien unterteilt und in übergeordneten Menüs versteckt, welche bei Bedarf ausgeklappt werden können. Ein Beispiel hierfür ist ein Dropdownmenü, wie man es von vielen Websites kennt.
+Bei der Hierarchischen Anordnung werden Funktionen und Informationen in logische Kategorien unterteilt und in übergeordneten Menüs versteckt, welche bei Bedarf ausgeklappt werden können.
+Ein Beispiel hierfür ist ein Dropdownmenü, wie man es aus vielen Programmen wie beispielsweise Microsoft Word (\cref{fig:HCD}) kennt.
 In einem kontextsensitiven System werden Aktionsmöglichkeiten und Informationen je nach aktuellem Status des Systems versteckt oder angezeigt. Beispielsweise bekommt man in einer Modellierungssoftware mit unterschiedlichen Elementen immer nur die Eigenschaften angezeigt die für das aktuell ausgewählte Element relevant sind, und nicht alle im System existierenden\cite{Lidwell.2010}.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[scale = 0.5]{figures/Dropdown.PNG}
+  \caption{Dropdownmenü in Word}
+  \label{fig:Dropdown}
+\end{center}
+\end{figure}
 
 
 \subsection*{Affordanz}
 
 Affordanz bezeichnet die Möglichkeiten mit einem Objekt zu interagieren. Beispielsweise kann eine Checkbox an und wieder abgewählt oder ein Schieberegler nach oben und unten geschoben werden.
+Beispiel hierfür lassen sich direkt in EB GUIDE finden und sind in \cref{fig:Checkbox} zu sehen.
 Die sichtbare Affordanz bezeichnet die Eigenschaft, dass einem Objekt die Interaktionsmöglichkeiten bereits angesehen werden können, ohne mit ihm interagiert zu haben.
 Sichtbare Affordanz ist vor allem in der User Interface Gestaltung wichtig, weil praktisch betrachtet alle Pixel auf einem Bildschirm anklickbar sind, jedoch in den meisten Fällen keine Aktion durch das klicken ausgelöst wird.
 Deshalb ist es wichtig dem Nutzer durch das Aussehen der Elemente zu vermitteln ob diese, wenn sie geklickt werden eine Aktion auslösen, um dem Nutzer wahlloses Klicken durch das Interface zu ersparen, bis ein interaktives Objekt gefunden wird.
 Solche Probleme können visuell gelöst werden, indem man Objekte im User Interface wie Objekte in der echten Welt aussehen lässt, also beispielsweise einen Button dreidimensional gestaltet.
 Alternativ kann man alle anklickbaren Objekte etwas anders gestalten als den Rest der Objekte im Interface, um dem Nutzer zu vermitteln das hier eine Interaktion stattfinden kann\cite{Knight.2019c}.
+
+\begin{figure}[H]
+\centering
+\subfloat[][]{\includegraphics[width=0.5\linewidth]{figures/Checkbox.PNG}}%
+\qquad
+\subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/Schieberegler.PNG}}%
+\caption{Checkbox und Schieberegler in EB GUIDE}%
+\label{fig:Checkbox}
+\end{figure}
 
 \subsection*{Rückmeldung}
 
@@ -184,10 +210,11 @@ Eine Rückmeldung ist vor allem auch dann wichtig, wenn die gewünschte Aktion n
 Durch fehlende Rückmeldungen kommt Misstrauen beim Nutzer auf, weil ihm nicht vermittelt wird, ob auf seine Aktionen auch eine Reaktion des Systems erfolgt\cite{Knight.2019c}.
 Dieses Problem tritt beispielsweise auf, wenn ein System lange braucht um eine Eingabe zu verarbeiten und es versäumt dies dem Nutzer mitzuteilen.
 So ein Verhalten könnte zur fälschlichen Annahme führen das System wäre defekt, oder dazu das der Nutzer beginnt neue Interaktionsmöglichkeiten anzuklicken.
+Nielsen hat hierfür konkrete Zeitspannen definiert, ab denen der Nutzer eine Rückmeldung erhalten muss oder in dene noch darauf verzichtet werden kann.\cite{.b}
 Reagiert das System innerhalb 0.1 Sekunden, nimmt der Nutzer dies als sofortiges Feedback wahr und keine gesonderte Meldung ist nötig.
 Bewegt sich die Reaktionszeit zwischen 0.1 und 1.0 Sekunden ist für gewöhnlich auch keine besondere Rückmeldung vom System nötig, auch wenn der Nutzer hier bereits nicht mehr das Gefühl hat direkt mit den Daten zu interagieren, da eine kurze Verzögerung stattfindet.
 Sobald die Wartezeit auf Seiten des Nutzers jedoch eine Sekunde überschreitet sollte sich der Cursor in eine Sanduhr oder ähnliches verwandeln und damit die Rückmeldung geben, dass das System beschäftigt ist.
-Sollte die systemseitige Verarbeitung der Eingabe länger als 10 Sekunden dauern ist es ratsam die Ladeanzeige durch eine konkrete Fortschrittsleiste zu ersetzen\cite{Nielsen.1995?}.
+Sollte die systemseitige Verarbeitung der Eingabe länger als 10 Sekunden dauern ist es ratsam die Ladeanzeige durch eine konkrete Fortschrittsleiste zu ersetzen.
 
 \subsection*{Mapping}
 Mapping bezeichnet die Beziehung zwischen Bedienelementen und den Effekten, den deren Aktivierung auslöst.
@@ -237,15 +264,18 @@ Für das entwickelte Modell stellt das EB GUIDE Target Framework auf dem Zielsys
 
 \begin{figure} [H]
 \begin{center}
-  \includegraphics[scale=0.7]{figures/EB_GUIDE_Puzzle.png}
+  \includegraphics[scale=0.6]{figures/EB_GUIDE_Puzzle.png}
   \caption{Aufbau EB GUIDE}
   \label{fig:guide_puzzle}
 \end{center}
 \end{figure}
 
-EB Guide Studio ist das Interface von EB Guide mit dem nach dem What-You-See-Is-What-You-Get (WYSIWYG) Prinzip User Interfaces modelliert werden. 
+EB GUIDE Studio ist das Interface von EB GUIDE mit dem nach dem What-You-See-Is-What-You-Get (WYSIWYG) Prinzip User Interfaces modelliert werden. 
 Durch das WYSIWYG Prinzip ist es während des Modellierens einer View bereits möglich das Endergebnis des Designs zu sehen.
-Das Verhalten des Interfaces hingegen wird mithilfe einer Zustandsmaschine, der sogenannten Statemachine modelliert, die auf dem UML- Prinzip aufbaut.
+Eine View bezeichnet in diesem Kontext einen projektspezifische Ansicht innerhalb des Interfaces, welche aus Widgets besteht, welche die Interaktionsschnittstelle zwischen Nutzer und System darstellen.
+Das Verhalten des Interfaces hingegen wird mithilfe einer Zustandsmaschine, der sogenannten State Machine modelliert, die auf dem UML- Prinzip aufbaut.
+Eine State Machine ist deterministischer, endlicher Zustandsautomat, welcher das dynamischer Verhalten des Systems beschreibt.
+Innerhalb von EB GUIDE besteht eine State Machine aus einer beliebigen Anzahl von Zuständen, wobei jeder Zustand einer View zugeordnet ist.
 Die Trennung der Logik und des Designs wird in EB GUIDE Studio grafisch durch zwei unterschiedliche Arbeitsoberflächen gestaltet, in welchen den Modellierern jeweils die entsprechenden Tools und Elemente zur Verfügung stehen.
 
 \begin{figure} [H]
@@ -256,21 +286,22 @@ Die Trennung der Logik und des Designs wird in EB GUIDE Studio grafisch durch zw
 \end{center}
 \end{figure}
 
-In \cref{fig:Guide_Statemachine} ist die Statemachine für ein simples Beispiel zu sehen.
+In \cref{fig:Guide_Statemachine} ist die State Machine für ein simples Beispiel zu sehen.
 Links neben der Arbeitsfläche befindet sich eine Toolbox, mit deren Inhalt per Drag and Drop auf der Arbeitsfläche die benötigte Logik definiert wird.
-Wie bei UML-Diagrammen gibt es einen Initial State der den Startpunkt angibt und einen Final State, der die Statemachine beendet.
+Wie bei UML-Diagrammen gibt es einen Initial State der den Startpunkt angibt und einen Final State, der die State Machine beendet.
 Die ebenfalls zu sehenden View States stehen für einen Screen im Endprodukt, dementsprechend wird in den View States auch das Aussehen der Interfaces definiert.
 Die Verbindungen zwischen den States werden als Transitionen bezeichnet und durch Events ausgelöst.
 Events stellen hierbei beliebige Ereignisse dar die durch Elemente in der View ausgelöst werden können.
-Der Auslöser für das Event wird mithilfe einer eigens für EB Guide entwickelten Skriptsprache als Trigger für dieses gesetzt.
+Der Auslöser für das Event wird mithilfe einer eigens für EB GUIDE entwickelten Skriptsprache als Trigger für dieses gesetzt.
 Die häufigsten Auslöser sind Benutzeraktionen mit Widgets, die in \cref{fig:Guide_View} zu sehen sind.
 Widgets sind Elemente, mit denen das Aussehen des Interfaces im sogenannten View Editor bestimmt wird und die sich in Basis- und 3D-Widgets einteilen lassen.
 Alle Basiswidgets verfügen über Basiseigenschaften wie Höhe, Breite und Farbe, sowie über spezifische Eigenschaften wie zum Beispiel \glqq Touch-Released\grqq{} bei einem Button.\cite{studio_guide}
-Beispielsweise wird das Event \glqq RectangleClick\grqq{}, was sich in \cref{fig:Guide_Statemachine} an der Transition zwischen View State 1 und View State 2 befindet, in diesem Fall durch das Klicken auf das grüne Rechteck in View State 1 ausgelöst.
-Ist die Benutzeraktion abgeschlossen, findet der Übergang von View State 1 zu View State 2 statt und der Nutzer sieht nun statt dem grünen ein rotes Rechteck.
+Beispielsweise wird das Event \glqq RectangleClick\grqq{} durch das Klicken auf das grüne Rechteck in View State 1 ausgelöst.
+Dies kann in \cref{fig:Guide_Statemachine} an der Transition zwischen View State 1 und View State 2 nachvollzogen werden.
+Ist die Benutzeraktion abgeschlossen, findet der Übergang von einem View State in den anderen statt und der Nutzer sieht nun statt dem grünen ein rotes Rechteck.
 Damit diese Aktion erfolgreich ausgeführt wird, muss das grüne Rechteck die Eigenschaft \glqq Touch-Released\grqq{} zugewiesen bekommen.
-Über die EB Guide Skriptsprache wird ihm dann mitgeteilt, das Event RectangleClick zu feuern sobald das grüne Rechteck berührt wurde.
-Da sich dieses Event in der Statemachine an der Transition zwischen den beiden States befindet, wird nun durch einen Klick auf das grüne Rechteck ein Bildschirmwechsel zwischen den beiden View States ausgelöst.
+Über die EB GUIDE Skriptsprache wird ihm dann mitgeteilt, das Event RectangleClick zu feuern sobald das grüne Rechteck berührt wurde.
+Da sich dieses Event in der State Machine an der Transition zwischen den beiden States befindet, wird nun durch einen Klick auf das grüne Rechteck ein Bildschirmwechsel zwischen den beiden View States ausgelöst.
 
 \begin{figure}[H]
 \begin{center}

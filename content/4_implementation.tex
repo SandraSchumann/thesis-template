@@ -1,22 +1,22 @@
 \chapter{Umsetzung}\label{ch:experiments}
 
 Nach Abschluss der Spezifikation der Benutzeranforderungen wird nun in den dritten Schritt des Human-Centered Design Process übergegangen.
-Hier gilt es, dass UX Design zu erstellen, wobei der Style Guide bereits am Ende des letzten Kapitels fertiggestellt wurde.
+Hier gilt es, dass UX Design zu erstellen, wobei der Style GUIDE bereits am Ende des letzten Kapitels fertiggestellt wurde.
 In den folgenden Abschnitten werden noch die benötigten Interaktionsmöglichkeiten definiert und ein, auf diesen Erkenntnissen aufbauender Prototyp erstellt.
 
 Der Großteil der Anpassungen wird in Form eines Prototypen umgesetzte, um weitere Evaluierungen leichter durchführen zu können und um eventuelle Anpassungen innerhalb kommender Iterationen leichter umsetzen zu können.
 Konkret werden die große Anpassungen der Multiselektion und die kleine Änderungen für die Template Properties innerhalb des Prototypen umgesetzte und untersucht, der Filter für die Widget Feature Properties hingegen wird direkt im EB GUIDE Projekt implementiert.
 Dies hat den Hintergrund, dass es bei der Multiselektion absehbar ist, dass hier noch einige Anpassungen nötig sein werden, bis das Design und die Funktionalität an die Bedürfnisse der Nutzer angepasst sind.
-Das liegt vor allem daran, dass hier noch keinerlei Grundlagen in EB Guide vorhanden sind, auf denen aufgebaut werden kann.
+Das liegt vor allem daran, dass hier noch keinerlei Grundlagen in EB GUIDE vorhanden sind, auf denen aufgebaut werden kann.
 Bei den Template Properties hat die Umsetzung innerhalb des Prototypen den Hintergrund, dass hier nicht sicher gesagt werden kann, ob die Verlagerung der Funktion \glqq publish to template interface\grqq{} von den Nutzern tatsächlich angenommen oder überhaupt an der angedachten Stelle intuitiv erwartet wird.
 Es ist hier auch sehr wahrscheinlich, dass an der Darstellung, Positionierung und der Kombination mit der bisherigen Position noch einige Anpassungen stattfinden müssen.
 Daher ist es sinnvoll, sich in diesem Fall strikt an den Human-Centered Design Process zu halten und innerhalb dessen Iterationen, solange das UX design zu verbessern bis es sicher den Nutzeranforderungen entspricht.
 Ansonsten würde hoher Entwicklungsaufwand in Anpassungen fließen die noch häufig verändert oder komplett verworfen werden müssen.
 Die Anpassung des Prototypen kann in diesen Fällen schneller, minimalistischer und mit kleinerem Aufwand erfolgen.
 
-Im Gegensatz dazu macht es Sinn die Filterfunktion direkt in EB Guide zu implementieren.
+Im Gegensatz dazu macht es Sinn die Filterfunktion direkt in EB GUIDE zu implementieren.
 Aus den bereits durchgeführten Analysen geht hervor, dass dieser Filter einen großen Mehrwert für die Nutzer bieten würde.
-Im Gegensatz zu den beiden anderen Änderungen gibt es hier keinen großen Spielraum mehr für Anpassungen, da sich das Design an den bereits bestehenden Filter und Suchfunktionen innerhalb von EB Guide orientiert.
+Im Gegensatz zu den beiden anderen Änderungen gibt es hier keinen großen Spielraum mehr für Anpassungen, da sich das Design an den bereits bestehenden Filter und Suchfunktionen innerhalb von EB GUIDE orientiert.
 Die einzige eventuelle Anpassung die hier noch auftreten könnte, wäre eine Änderung der Position.
 Ob dies jedoch innerhalb eines Prototypen oder im XAML Code stattfindet, macht - betrachtet man den zeitlichen Aufwand - keinen Unterschied.
 Daher ist es hier effizienter, die Änderungen direkt zu implementieren und das Verhalten nicht zuerst innerhalb eines Prototypen zu simulieren.
@@ -33,8 +33,8 @@ Axure RP ist eine Software die es ermöglicht Wireframes, Prototypen, Dokumentat
 Dies wird durch Drag and Drop Aktionen, Skalierung und Formatierung von Widgets ermöglicht, mit deren Hilfe man das gewünschte Endprodukt erstellen kann.
 Für diese Arbeit ist vor allem die Möglichkeit einen Prototypen zu erstellen wichtig.
 Ausschlaggebend für die Wahl dieser Software ist, dass AXURE RP 9 die Möglichkeit bietet dynamische Inhalte zu erstellen und logische Bedingungen in den Prototypen einzubinden.
-Da es sich bei EB Guide Studio um ein Modellierungstool handelt, ist ein rein statischer Prototyp nicht ausreichend.
-Ebenfalls reicht es nicht aus feste Hotspots zu haben bei deren Klick etwas passiert, sondern es ist notwendig, die in EB Guide herrschenden Einschränkungen für den Nutzer simulieren zu können.
+Da es sich bei EB GUIDE Studio um ein Modellierungstool handelt, ist ein rein statischer Prototyp nicht ausreichend.
+Ebenfalls reicht es nicht aus feste Hotspots zu haben bei deren Klick etwas passiert, sondern es ist notwendig, die in EB GUIDE herrschenden Einschränkungen für den Nutzer simulieren zu können.
 
 Ein weiterer Grund sich für diese Software zu entscheiden ist es, dass die UX Designer bei Elektrobit ebenfalls mit AXURE RP arbeitet.
 So ist zum einen gewährleistet, dass bei den Usabilitytest keine Schwierigkeiten mit der verwendeten Software auftreten würde, zum anderen ist dadurch gleichzeitig ein Ansprechpartner bei auftretenden Problemen vorhanden.
@@ -75,7 +75,7 @@ Passend dazu wir der Kreis mit der gewünschten Farbe angezeigt, und die Visibil
 
 \begin{figure}%
 \centering
-\subfloat[][]{\includegraphics[width=0.5\linewidth]{figures/AXURE_Droplist.PNG}}%
+\subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/AXURE_Droplist.PNG}}%
 \qquad
 \subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/AXURE_Droplist_Conditions.PNG}}%
 
@@ -113,7 +113,7 @@ Daher wird vor der Erstellung des Prototyps festgelegt welche Interaktionen von 
 
 Für die Prüfung der Usability der Ergänzungen ist es jedoch nicht ausreichend nur die neuen oder ergänzten Funktionen zu simulieren.
 Um diese überhaupt anwenden zu können muss der Nutzer einen gewissen Fortschritt innerhalb des Modellierungsprozesses erreicht haben.
-Um an diesen Punkt zu gelangen ist es unbedingt notwendig, dass dem Nutzer gewissen Grundfunktionen von EB Guide zur Verfügung stehen.
+Um an diesen Punkt zu gelangen ist es unbedingt notwendig, dass dem Nutzer gewissen Grundfunktionen von EB GUIDE zur Verfügung stehen.
 Das bedeutet für den konkreten Fall dieser Bachelorarbeit, dass es für den Nutzer möglich sein muss wie gewohnt Elemente per Drag and Drop in den View zu ziehen, und diese dort auch frei bewegen zu können.
 Ebenfalls müssen die Properties aller Widgets frei anpassbar sein und die Elemente müssen wie gewohnt auf die Eingaben des Nutzers reagieren.
 Da sich die Funktion \glqq publish to template interface\grqq{} innerhalb der Templates befindet, muss auch die Möglichkeit bestehen Templates anzulegen.
@@ -124,7 +124,7 @@ Zusätzlich muss es nun möglich sein, mehrere Elemente gleichzeitig auszuwähle
 Die Anpassung der Properties müssen sich in diesem Fall auch auf alle angewählten Elemente auswirken und diese müssen gemeinsam im View bewegt werden können.
 Zusätzlich müssen noch die neuen Alignment Actions, sowie die Funktion \glqq Insert in Template\grqq{} angezeigt werden und ausführbar sein.
 
-Da sehr viele unterschiedliche Widget- und Templatetypen in EB Guide existieren, ist es an dieser Stelle des Prozesses auch sinnvoll sich bereits Gedanken über den abschließenden Usability Test zu machen und die Funktionen des Prototypen entsprechend einzuschränken.
+Da sehr viele unterschiedliche Widget- und Templatetypen in EB GUIDE existieren, ist es an dieser Stelle des Prozesses auch sinnvoll sich bereits Gedanken über den abschließenden Usability Test zu machen und die Funktionen des Prototypen entsprechend einzuschränken.
 Die Modellierer bei Elektrobit setzen hauptsächlich HMIs für den Fahrzeuginnenraum mit EB GUIDE um.
 Daher erscheint es sinnvoll für den Usability Test einen minimalistischen Startscreen eines solchen Interfaces modellieren zu lassen.
 Da diese, wenn man die Interaktionslogik außen vor lässt, nur aus Images und Labels bestehen ist es ausreichend diese beiden Widgets funktionsfähig zu machen.
