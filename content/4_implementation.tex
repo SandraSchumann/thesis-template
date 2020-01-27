@@ -120,7 +120,7 @@ Da sich die Funktion \glqq publish to template interface\grqq{} innerhalb der Te
 
 Darauf aufbauend müssen noch die neuen oder veränderten Funktionen in den Prototypen integriert werden.
 Dazu zählt konkret, dass die Funktion \glqq publish to template interface\grqq{} verlagert wird und die vorhandene Möglichkeit dafür vorerst nicht simuliert werden muss.
-Zusätzlich muss es nun möglich sein, mehrere Elemente gleichzeitig auszuwählen und hierfür ein Propertiepanel einzublenden.
+Zusätzlich muss es nun möglich sein, mehrere Elemente gleichzeitig auszuwählen und hierfür ein Property Panel einzublenden.
 Die Anpassung der Properties müssen sich in diesem Fall auch auf alle angewählten Elemente auswirken und diese müssen gemeinsam im View bewegt werden können.
 Zusätzlich müssen noch die neuen Alignment Actions, sowie die Funktion \glqq Insert in Template\grqq{} angezeigt werden und ausführbar sein.
 
@@ -173,8 +173,8 @@ Sie bieten die einzigartigen Interactions \glqq Drag Started\grqq{},\glqq Dragge
 Hier erweist es sich als praktisch \glqq Drag Dropped\grqq{} mit einer If Bedingung zu versehen, damit das Element nur über dem dafür vorgesehenen View abgelegt werden kann und nicht zum Beispiel im Bereich der Datapoolitems.
 
 \paragraph{Widget Tree}
-Sobald etwas in den View hinzugefügt wird, muss dies für den Nutzer ebenfalls im WidgetTree sichtbar werden.
-Dies ist mithilfe eines Screenhots gelöst - zu sehen in \cref{fig:Prototyp_03} -  wobei sich noch weitere Elemente im WidgetTree befinden, die vorläufig überdeckt werden.
+Sobald etwas in den View hinzugefügt wird, muss dies für den Nutzer ebenfalls im Widget Tree sichtbar werden.
+Dies ist mithilfe eines Screenhots gelöst - zu sehen in \cref{fig:Prototyp_03} -  wobei sich noch weitere Elemente im Widget Tree befinden, die vorläufig überdeckt werden.
 Fügt der Nutzer nun das entsprechende Element zum View hinzu, wird die Abdeckung entfernt und das Objekt kann nun über den Widget Tree ausgewählt werden.
 Die Interaktionsmöglichkeit wird von AXURE mit den gelben Blitzen gekennzeichnet und ist ebenfalls mit logischen Bedingungen umgesetzt.
 
@@ -185,11 +185,11 @@ Die Interaktionsmöglichkeit wird von AXURE mit den gelben Blitzen gekennzeichne
 \end{center}
 
 \paragraph{Properties}
-Um die Interaktion mit allen eingefügten Elementen möglich zu machen, erhält jedes Element sein eigenes Propertiespanel, welches in \cref{fig:Prototyp_04} zu sehen ist.
+Um die Interaktion mit allen eingefügten Elementen möglich zu machen, erhält jedes Element sein eigenes Property Panel, welches in \cref{fig:Prototyp_04} zu sehen ist.
 Damit dem Nutzer immer klar ist, welches Element aktuell ausgewählt ist, wird auch hier das Verhalten von EB GUIDE nachgebaut, indem jedes ausgewählte Element einen grünen Rahmen erhält.
 Die Auswahl hierfür muss über das Element selbst oder den Widget Tree möglich sein.
 
-Ist das Objekt aktuell ausgewählt erscheint ein entsprechendes Propertiespanel, welches ebenfalls einen Screenshot beinhaltet der mit Textfeldern überlagert wird.
+Ist das Objekt aktuell ausgewählt erscheint ein entsprechendes Property Panel, welches ebenfalls einen Screenshot beinhaltet der mit Textfeldern überlagert wird.
 Diese Felder sind mit globalen Variablen verknüpft, welche wiederum die Properties der Bilder im Workspace von AXURE anpassen.
 Dadurch wird es ermöglicht, dass Eingaben in das Textfeld das Objekt verändern und umgekehrt, Bewegungen des Objektes die Werte in den Textfeldern aktualisieren.
 Damit wird für den Nutzer das exakt gleiche Verhalten nachmodelliert, welches in EB GUIDE existiert.
@@ -242,7 +242,7 @@ Dadurch verschiebt sich das zweite Objekt und der Abstand der zwei Objekte entsp
 \paragraph{Templates}
 Das Anlegen von Templates wird ebenfalls mit Screenshots simuliert die mit Hotspots versehen werden.
 Zusätzlich besteht hier noch die Notwendigkeit einen Imagetab neben dem View anzulegen, da das Erstellen der Templates in einer anderen View stattfindet.
-In diesem Tab existiert ebenfalls ein Propertiespanel, die Funktion \glqq publish to template interface\grqq{} geschieht wie geplant über einen Klick auf den Kreis, der sich nach der Auswahl blau einfärbt.
+In diesem Tab existiert ebenfalls ein Property Panel, die Funktion \glqq publish to template interface\grqq{} geschieht wie geplant über einen Klick auf den Kreis, der sich nach der Auswahl blau einfärbt.
 Wird hier ein Wert angepasst wirkt sich das über eine globale Variable auch auf das Template Interface aus.
 Eine Änderung im Template Interface darf jedoch nie ein Property des Templates anpassen.
 Deshalb wurden hier zwei getrennte Sets von globalen Variablen angelegt, welche nur in eine Richtung synchronisieren.
@@ -371,7 +371,7 @@ Zusätzlich dazu wird dem AvailableWidgetFeatures in Auflistung \ref{lst:Collect
 \lstinputlisting[caption={Filtertext Properties},captionpos=b,  label=lst:Properties]{listings/Filter_Properties.cs}
 
 Das Update vonseiten der View wird aufgrund des, in Auflistung \ref{lst:XAML} in Zeile 5 bis 6 zu sehenden, UpdateSourceTriggers ausgelöst. 
-Hier wird über die Angabe des Paths festgelegt, dass bei jeder Änderung der TextProperty die Properties des FilterTextes aktualisiert werden.
+Hier wird über die Angabe des Paths festgelegt, dass bei jeder Änderung der Text Property die Properties des FilterTextes aktualisiert werden.
 Zusätzlich wird hier ein Delay von 100 eingeführt, um die Filterung in Echtzeit zu ermöglichen.
 Dieses Zeitintervall führt dazu, dass der Nutzer auch bei einer schnellen Eingabe nicht durch eine verzögerte Aktualisierung in seinem Arbeitsablauf unterbrochen  oder verlangsamt wird.
 

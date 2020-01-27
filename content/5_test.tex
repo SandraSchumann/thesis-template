@@ -1,7 +1,8 @@
 \chapter{Usability Test}\label{ch:outlook}
 
 Aufbauend auf allen bisher getätigten Analysen und Anpassungen des Interface, gilt es abschließend noch den Prototypen und die Implementierung mithilfe eines Usability Tests zu evaluieren.
-Hierbei wird im Schritt \glqq Finalize the UX design\grqq{} des Human-Centered Design Process die Rolle des Usability Testers abgedeckt, auf weitere Anpassungen des Interface in der Funktion des User Interface Designers wird verzichtet.
+Hierbei wird im Schritt \glqq Finalize the UX design\grqq{} des Human-Centered Design Process die Rolle des Usability Testers abgedeckt, welcher für die Durchführung aus Auswertung des Usability Tests zuständig ist.
+Auf weitere Anpassungen des Interface wird verzichtet.
 
 In diesem abschließenden Kapitel werden die Grundlagen des verwendeten Tools für den Usability Test erläutert.
 Darauf folgend wird die Art des durchgeführten Tests definiert und dargelegt auf welchen Grundlagen diese Wahl getätigt wurde.
@@ -130,10 +131,10 @@ Die Probanden müssen hier die identische Aufgabe durchführen und werden, angep
 Den Nutzern hier ein komplett freies Arbeiten zu gestatten ist nicht möglich, da möglichst identische Arbeitsschritte getätigt werden müssen um einen validen Vergleich anstellen zu können.
 
 \section {Ergebnisse}
-Die Anzahl der in einem Test gefunden Usabilityprobleme lässt sich laut Nielsen und Landauer nach folgender Formel berechnen.
+Die Anzahl der in einem, mit n Nutzern, durchgeführten Test gefunden Usabilityprobleme lässt sich laut Nielsen und Landauer nach folgender Formel berechnen.
 
 \begin{center}
-$\mathbf{N (1-(1- L ) n )}$ 
+$\mathbf{N (1-(1- L ) ^n )}$ 
 \end{center}
 
 wobei N der kompletten Anzahl der Usabilityprobleme im System entspricht und L der Anzahl der entdeckten Probleme nach dem Test mit einem Nutzer.
@@ -312,7 +313,7 @@ Das gleichzeitige Anpassen von Eigenschaften wie der Position und Skalierung von
 Dadurch wird eine Grundlage für weitere Interaktionsmöglichkeiten dieser Art gelegt.
 So ist es beispielsweise üblich die Eigenschaften, die nun gemeinsam anpassbar sind, mit Datapoolitems zu verlinken.
 Bei den Befragungen nach dem Test äußern hier einige der Nutzer den Wunsch diese Verlinkung ebenfalls mithilfe der Multiselektion durchführen zu können, was es für eine weitere Iteration im Prototyp ergänzt und evaluiert werden kann.
-Zusätzlich wird angegeben das über dem Propertiespanel angezeigt werden soll welche Objekte aktuell zusammen ausgewählt sind, da dies bis jetzt nur im View erkennbar ist.
+Zusätzlich wird angegeben das über dem Propertie Panel angezeigt werden soll welche Objekte aktuell zusammen ausgewählt sind, da dies bis jetzt nur im View erkennbar ist.
 
 Da bei den durchgeführten Tests deutlich wird das die Nutzer sich für die Alignment Actions interessieren kann nun in folgenden Iterationen noch eine Verbesserung und Erweiterung der Funktionalitäten angestrebt werden.
 Für diesen Test war der Prototyp so ausgelegt, dass bereits bekannt war welches der drei Bilder des Hauptmenüs links, rechts und in der Mitte liegt.

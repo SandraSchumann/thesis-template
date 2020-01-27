@@ -42,8 +42,10 @@ Diese Vorgehensweisen werden im Rahmen dieser Arbeit kombiniert angewandt, wodur
 Die Nutzer werden bei ihrer täglichen Arbeit beobachtet und währenddessen aufgefordert ihre aktuellen Arbeitsschritte zu erklären, wodurch sie bei Bedarf auch automatisch Kritik am Interface äußern können und dem Beobachter/Interviewer begleitendes befragen ermöglicht wird.
 
 \section{Ergebnisse}
-
-Bei der Durchführung der Beobachtungen fallen einige Dinge auf, die die Modellierer bei ihrer Arbeit behindern oder erheblich verlangsamen.
+Die soeben beschriebenen Vorgehensweise wird bei der Beobachtung/Befragung von fünf Modellierern angewandt.
+Da hier immer der gesamte Ablauf einer typischen Arbeitsaufgabe beobachtet wird, variiriert die Dauer der Sitzungen.
+Im Durchschnitt werden die Modellierer jedoch 2 bis 3 Stunden bei ihrer täglichen Arbeit beobachtet und währenddessen zu - für den Beobachter unklaren - Abläufen befragt.
+Bei der Durchführung der Beobachtungen fallen einige Dinge auf, die die Modellierer bei ihrer Arbeit behindern oder erheblich verlangsamen und welche alle in den folgenden Abschnitten aufgeführt werden.
 Teilweise fällt den Nutzern das selbst auf und sie weisen den Beobachter darauf hin, teilweise haben sie sich bereits so an die Arbeitsschritte gewöhnt, dass die Behinderung nur einem Außenstehenden auffällt, den Nutzern selbst jedoch nicht mehr.
 
 Im Folgenden werden zuerst Beobachtungen allgemein erläutert, bevor die Bedürfnisse der Nutzer formuliert werden, damit es abschließend möglich ist die qualitativen Benutzeranforderungen zu definieren.
@@ -53,48 +55,104 @@ Die Quantitativen Anforderungen werden in Kapitel 5, im Rahmen des tatsächliche
 Bei einer Image List handelt es sich um ein Datapool Item. 
 Datapool Items sind Modelelemente, die benutzt werden können, um Daten von der Applikation an das Interface zu senden, oder umgekehrt.
 Außerdem können damit Daten gespeichert werden, die entweder nur von Seiten des Interfaces genutzt werden, oder nur von der Applikationsseite\cite{studio_guide}.
-In \cref{fig:ImageList} kann das befüllen eines solchen Datapool items am Beispiel einer Image List nachvollzogen werden.
-In Abbildung b) initialisiert der Nutzer das Befüllen der Liste durch einen Klick auf den \glqq Stift\grqq{} Button, wodurch sich das Pop Up in Abbildung c) öffnet.
-Die hier zu sehenden Platzhalter für Index und Value müssen einzeln durch einen Klick auf den \glqq Add..\grqq{} Button hinzugefügt werden, und danach, wie in Abbildung d) markiert, mit dem gewünschten Image befüllt werden.
+In \cref{tab:gt} kann das befüllen eines solchen Datapool items am Beispiel einer Image List nachvollzogen werden.
+
+\newpage
+
+\begin{longtable}[H] { c | m{5cm} }
+\hline
+Arbeitsschritt & Beschreibung \\ \hline 
+\\
+  \centering
+ % \begin{tabular}{ c | m{5cm} }
+    \begin{minipage}{.25\textwidth}
+      \includegraphics[width=\linewidth]{figures/ImageList_01.PNG}
+    \end{minipage}
+    &
+    %\begin{minipage}[t]{5cm}
+   Anfangs besteht für den Nutzer die Möglichkeit aus einer Vielzahl von Datapool Items zu wählen.
+  Hierfür werden bereits zwei Klicks benötigt, dieser Vorgang ist jedoch einmalig und kann auch nicht reduziert werden
+    %\end{minipage}
+    \\ 
+    \\ \hline
+    \\
+ \begin{minipage}{.25\textwidth}
+      \includegraphics[width=\linewidth]{figures/ImageList_02.PNG}
+    \end{minipage}
+    &
+    %\begin{minipage}[t]{5cm}
+   Hier initialisiert der Nutzer das Befüllen der Liste durch einen Klick auf den \glqq Stift\grqq{} Button, wodurch sich das Pop Up in der Folgenden Grafik öffnet.
+    %\end{minipage}
+	\\	
+ \\ \hline
+    \\
+ \begin{minipage}{.4\textwidth}
+      \includegraphics[width=\linewidth]{figures/ImageList_04.PNG}
+    \end{minipage}
+    &
+    %\begin{minipage}[t]{5cm}
+   Die hier zu sehenden Platzhalter für Index und Value müssen einzeln durch einen Klick auf den \glqq Add..\grqq{} Button hinzugefügt, ...
+    %\end{minipage}
+	\\	
+ % \end{tabular}
+ \\ \hline
+    \\
+ \begin{minipage}{.4\textwidth}
+      \includegraphics[width=\linewidth]{figures/ImageList_05.PNG}
+    \end{minipage}
+    &
+    %\begin{minipage}[t]{5cm}
+  ... und danach individuell mit dem gewünschten Images befüllt werden.
+    %\end{minipage}
+	\\	
+ % \end{tabular}
+\\
+  \caption{Usability - Schwäche Image List}\label{tab:gt}
+\end{longtable}
+
+%In Abbildung b) initialisiert der Nutzer das Befüllen der Liste durch einen Klick auf den \glqq Stift\grqq{} Button, wodurch sich das Pop Up in Abbildung c) öffnet.
+%Die hier zu sehenden Platzhalter für Index und Value müssen einzeln durch einen Klick auf den \glqq Add..\grqq{} Button hinzugefügt werden, und danach, wie in Abbildung d) markiert, mit dem gewünschten Image befüllt werden.
 Für die minimale Auswahl in diesem Beispiel ist der Aufwand noch überschaubar, es gilt jedoch zu bedenken, dass in tatsächlichen Projekten Image Lists mit mindestens 100 Images erstellt werden.
 Das bedeutet für den Nutzer mehrere Stunden Arbeit, die keinen wirklichen Mehrwert liefern und den Joy of Use deutlich mindern.
 Joy of Use bezeichnet im Allgemeinen eine Erweiterung der Usability dar und beschreibt die positiven Erfahrungen eines Nutzers.
 Diese werden vor allem durch das effiziente Erreichen der gesteckten Ziele erreicht, was bei einer sich immer wieder wiederholenden Tätigkeit nicht gegeben ist.
 
-\begin{figure}%
-  \centering
-  \subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/ImageList_01.PNG}}%
-  \qquad
-  \subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/ImageList_02.PNG}}%
- \qquad
-  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/ImageList_04.PNG}}%
- \qquad
-  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/ImageList_05.PNG}}%
-  \caption{Usability - Schwäche Image List}%
-  \label{fig:ImageList}
-\end{figure}
+%\begin{figure}
+
+%  \centering
+%  \subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/ImageList_01.PNG}}%
+%  \qquad
+%  \subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/ImageList_02.PNG}}%
+% \qquad
+%  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/ImageList_04.PNG}}%
+% \qquad
+%  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/ImageList_05.PNG}}%
+%  \caption{Usability - Schwäche Image List}%
+%  \label{fig:ImageList}
+%\end{figure}
 
 \paragraph{Resultierende Benutzeranforderung}
 Nutzer, die eine Datapool Liste anlegen, müssen die Möglichkeit haben mehrere Images gleichzeitig zu dieser Liste hinzuzufügen.
 
-
 \paragraph{Navigation}
-Soll ein neues Element in der View hinzugefügt werden, wird der WidgetTree in der Navigation, in \cref{fig:Navigation} zu sehen, nicht automatisch ausgeklappt.
+Soll ein neues Element in der View hinzugefügt werden, wird der Widget Tree in der Navigation, in \cref{fig:Navigation} zu sehen, nicht automatisch ausgeklappt.
 Durch Beobachtung kann festgestellt werden, dass die Nutzer, nachdem sie ein neues Element eingefügt haben, dieses sofort umbenennen. 
-Für diesen Vorgang muss das Element im WidgetTree erst gesucht werden, was in einigen Fällen sehr viele Klicks, und damit auch Zeit fordert.
+Für diesen Vorgang muss das Element im Widget Tree erst gesucht werden, wobei sich je nach angelegten Ebenen im Projekt die Anzahl der hier benötigten Klicks exponentiell steigert.
 Sollte der Nutzer in \cref{fig:Navigation} beispielsweise gerade das NavImage eingefügt haben, müssen erst vier Ebenen ausgeklappt werden, bevor das Umbenennen möglich ist.
+In größeren Projekten ist es üblich mehrere Templates ineinander zu schachteln, was bis zu 10 Ebenen im Widget Tree führen kann.
+Ein automatische Ausklappen des selbigen würde den Nutzern also vor allem in komplizierteren Projekten unnötigen Aufwand ersparen.
 
-\begin{figure}%
+\begin{figure}[H]
   \centering
-  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/Navigation.png}}%
+  \subfloat[][]{\includegraphics[width=0.25\linewidth]{figures/Navigation.png}}%
   \qquad
-  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/Navigation_01.png}}%
+  \subfloat[][]{\includegraphics[width=0.25\linewidth]{figures/Navigation_01.png}}%
   \caption{Usability - Schwäche Navigation}%
   \label{fig:Navigation}
 \end{figure}
 
 \paragraph{Resultierende Benutzeranforderung}
-Nutzer, die ein neues Element zu ihrer View hinzufügen, müssen die Position dieses Items sofort im WidgetTree nachvollziehen können.
+Nutzer, die ein neues Element zu ihrer View hinzufügen, müssen die Position dieses Items sofort im Widget Tree nachvollziehen können.
 
 \paragraph{Template Properties}
 Ein Widget Template ermöglicht die Definition eines individuellen Widgets, welches beliebig oft in einem EB GUIDE Model benutzt werden kann.
@@ -107,18 +165,17 @@ Diese werden Template Properties genannt.\cite{studio_guide}
 
 In \cref{fig:TemplateProperties} ist zu sehen, wie die Funktion  \glqq publish to template interface\grqq{} ausgeführt wird.
 Hierfür ist zuerst ein Rechtsklick auf das Viereck hinter dem gewünschten Property nötig, bevor noch auf Add to template interface geklickt werden muss.
-
 Während der Beobachtung wird deutlich, dass vor allem der Rechtsklick den Arbeitsablauf sehr beeinträchtigt, da dieser in EB GUIDE selten verwendet wird. 
 Zum Großteil wird mit dem normalen Linksklick gearbeitet, weshalb das auch für diesen Fall wünschenswert wäre.
 In Teil b) von \cref{fig:TemplateProperties} sieht man, dass das verlinkte Property nun einen blauen, statt einem weißen Kreis aufweist.
 Alle anderen Optionen, wie  \glqq Add link to widget property\grqq{} wirken sich nach ihrer Anwendung farblich auf das eben angeklickte Quadrat und nicht auf den Kreis aus.
 Es wäre also denkbar die Funktion \glqq publish to template interface\grqq{} einfach durch einen Linksklick auf den Kreis zu aktivieren.
 
-\begin{figure}%
+\begin{figure}[H]
   \centering
-  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/TemplateProperties.png}}%
+  \subfloat[][]{\includegraphics[width=0.5\linewidth]{figures/TemplateProperties.png}}%
   \qquad
-  \subfloat[][]{\includegraphics[width=0.4\linewidth]{figures/TemplateProperties_01.png}}%
+  \subfloat[][]{\includegraphics[width=0.3\linewidth]{figures/TemplateProperties_01.png}}%
   \caption{Usability - Schwäche Template Properties}%
   \label{fig:TemplateProperties}
 \end{figure}
@@ -179,7 +236,11 @@ Die Untersuchung des Wiedererkennungswertes wäre ebenfalls möglich.
 Da es sich bei der ausgewählten Gruppe jedoch um eine Mischung aus Experten und Gelegenheitsnutzern handelt wären hier getrennte Testaufgaben für die Gelegenheitsnutzer nötig, da der Wiedererkennungswert nur bei diesem Teil der Zielgruppe untersucht werden kann.
 Außerdem ist bei den im vorherigen analysierten Schwächen keine aufgetreten, die direkt mit diesem Prinzip in Verbindung gebracht werden könnte.
 
-Was bei den Analysen jedoch deutlich auffällt, ist die Verringerung der Effizienz bei der gesamten Zielgruppe, nicht nur bei den Experten.
+Bei den durchgeführten Beobachtungen wurden jedoch Usabilityschwächen erkannt, welche sich höchstwahrscheinlich auf die Effizienz der Nutzer auswirken.
+Diese Beeinträchtigung findet bei den gefunden Schwächen der Image List, der Navigation und der Widget Feature Properties dadurch statt, dass die Nutzer hier viele Menüs ausklappen oder für jedes Element - im Fall der Image List -  eine aufwändige Folge von Klicks durchlaufen müssen.
+Bei der Funktion \glqq publish to template interface\grqq{} lässt sich ebenfalls vermuten, dass der nötige Rechtsklick die Nutzer in ihrer Effizienz beeinflusst.
+Ebenso ist zu erwarten das das gleichzeitige Anpassen von Attributen durch eine funktionale Multiselektion den Modelliervorgang beschleunigt.
+Ob diese Vermutungen sich wie erwartete auf das Arbeitsverhalten der Modellierer auswirken wird mit den abschließenden Usability Tests herausgefunden.
 Da für eine Messung dieses Attributes ohnehin eine Zeitmessung nötig ist, kann man währenddessen auch gut die vom System auftretenden Fehler und deren Auswirkungen auf den weiteren Arbeitsverlauf festhalten.
 Die ausgewählten Verbesserungen müssen also hauptsächlich auf Effizienz und gegebenenfalls noch auf auftretende Fehler untersuchbar sein.
 
@@ -192,7 +253,6 @@ Die Anpassung der Befüllung der Image List ist als eine umfangreiche, aufwändi
 Allerdings ist hier bereits absehbar, dass eine Anpassung die Effizienz deutlich steigern würde, da ein gruppiertes Einfügen auf jeden Fall eine Zeitersparnis mit sich bringt.
 Darüber hinaus haben sich, für die Lösung dieses Problems einige Teams bereits Plug-Ins implementiert, die genau dieses Problem beheben. 
 Diese sind zwar nicht Bestandteil des offiziellen Tools, werden jedoch von den internen Teams bereits routiniert benutzt, weshalb diese Anpassung auf kurze Sicht keinen Mehrwert liefern würde, sondern dies erst für neu startende Projekte der Fall wäre.
-
 Die Anpassung der Image List würde also zum einen nicht das Kriterium erfüllen für weitere Analysen geeignet zu sein, da der Mehrwert der Anpassung bereits sehr deutlich ist.
 Zum anderen existiert bereits eine temporäre Lösung für dieses Problem.
 
@@ -203,15 +263,15 @@ Es handelt sich hierbei um ein Panel in EB GUIDE Studio, welches sich Standardm�
 Greift man noch einmal das Beispiel aus \cref{fig:Navigation} auf, sieht die Lösung in EB GUIDE Studio für dieses Problem aktuell so aus, dass für jedes ausgewählte Objekt dessen Umgebung in der Outline angezeigt wird.
 Dies funktioniert auch gut für neu eingefügte Elemente, da diese defaultmäßig nach dem Einfügen ausgewählt werden.
 
-Während der Beobachtung der Nutzer fällt jedoch auf, dass keiner der Nutzer diesen Outliner zu benutzen scheint, sondern lieber direkt im Widget Tree arbeitet.
-An diesem Punkt wären also weitere Analysen nötig, ob manche Nutzer eventuell nichts von der Existenz dieser Funktion wissen oder ob ihnen die Nutzung zu unhandlich ist.
-Aufgrund dieser ausstehenden Analysen ist diese Schwäche jedoch auch nicht für eine Überarbeitung in dieser Bachelorarbeit geeignet.
-
 \begin{center}
-  \includegraphics[scale=0.8]{figures/Outline.png}
+  \includegraphics[scale=0.6]{figures/Outline.png}
   \captionof{figure}{Ergänzung zur Navigation in Form einer Outline}
   \label{fig:Outline}
 \end{center}
+
+Während der Beobachtung der Nutzer fällt jedoch auf, dass keiner der Nutzer diesen Outliner zu benutzen scheint, sondern lieber direkt im Widget Tree arbeitet.
+An diesem Punkt wären also weitere Analysen nötig, ob manche Nutzer eventuell nichts von der Existenz dieser Funktion wissen oder ob ihnen die Nutzung zu unhandlich ist.
+Aufgrund dieser ausstehenden Analysen ist diese Schwäche jedoch auch nicht für eine Überarbeitung in dieser Bachelorarbeit geeignet.
 
 \paragraph{Template Properties}
 Die Verlagerung des Hotspots für die Funktion \glqq publish to template interface\grqq{}, kann ebenfalls als eine kleine Änderung betrachtet werden.
@@ -252,10 +312,21 @@ Diese Verletzung kann jedoch nach Validierung durch den Usability Test im Nachhi
   \label{fig:TemplateProperties_Adaption}
 \end{center}
 
-
+\newpage
 \paragraph{Widget Feature Properties}
 Für das Hinzufügen einer Filterfunktion ist das Einfügen einer Filterleiste in das Interface, wie in \cref{fig:FeatureProperty_Adaption} zu sehen, nötig.
-Teil a) der Abbildung zeigt hier zur Erinnerung noch einmal die besthende Implementierung, in Teil b) ist der ergänzte Filter zu sehen der in c) live nach dem eingegebenen Begriff filtert.
+Teil a) der Abbildung zeigt hier zur Erinnerung noch einmal die bestehende Implementierung, in Teil b) ist der ergänzte Filter zu sehen der in c) live nach dem eingegebenen Begriff filtert.
+
+\begin{figure}[H]
+  \centering
+  \subfloat[][]{\includegraphics[width=0.28\linewidth]{figures/WidgetFeatureProperty_Before.PNG}}%
+  \qquad
+  \subfloat[][]{\includegraphics[width=0.28\linewidth]{figures/WidgetFeatureProperty_Adaption.PNG}}%
+ \qquad
+  \subfloat[][]{\includegraphics[width=0.28\linewidth]{figures/WidgetFeatureProperty_Live.PNG}}%
+  \captionof{figure}{Verbesserung Feature Property Properties}
+  \label{fig:FeatureProperty_Adaption}
+\end{figure}
 
 Als Gestaltprinzip der Usability wird hier, zum einen die ästehtische, funktionale und interne Konsistenz des Designs, zum anderen Such- und Filterfunktionen, die in der Benutzeroberfläche von EB GUIDE Verwendung finden gewahrt.
 Dadurch ergibt sich automatisch eine externe Konsistenz, da das bereits bestehende Design dieser Leisten von Elektrobit an das Design bereits bekannter Suchleisten angelehnt wurde.
@@ -269,39 +340,27 @@ Zum anderen bekommt er durch den grauen Text suggeriert, dass hier etwas anklick
 
 Die Rückmeldung, die für den Nutzer sehr wichtig ist, erfolgt durch die Tatsache, dass der Filter live auf die Änderungen des Nutzers reagiert, es also eine sehr schnelle Anpassung der Liste der Features gibt.
 
-\begin{figure}%
-  \centering
-  \subfloat[][]{\includegraphics[width=0.25\linewidth]{figures/WidgetFeatureProperty_Before.PNG}}%
-  \qquad
-  \subfloat[][]{\includegraphics[width=0.25\linewidth]{figures/WidgetFeatureProperty_Adaption.PNG}}%
- \qquad
-  \subfloat[][]{\includegraphics[width=0.25\linewidth]{figures/WidgetFeatureProperty_Live.PNG}}%
-  \captionof{figure}{Verbesserung Feature Property Properties}
-  \label{fig:FeatureProperty_Adaption}
-\end{figure}
-
 \paragraph{Mehrfachselektion}
-Um die Anpassung der Properties bei Mehrfachselektion zu ermöglichen ist es nötig ein Property-Panel anzuzeigen, wie in \cref{fig:Mehrfachselektion_Adaption} zu sehen.
+Um die Anpassung der Properties bei Mehrfachselektion zu ermöglichen ist es nötig ein Property Panel anzuzeigen, wie in \cref{fig:Mehrfachselektion_Adaption} zu sehen.
 Wie bei der normalen Auswahl eines Elementes werden dort Properties wie width/height und die Koordinaten angezeigt, zusätzlich ist es mit den neuen Alignment Actions noch möglich die ausgewählten Elemente aneinander auszurichten.
 Diese Funktion gibt es bisher in EB GUIDE Studio noch nicht, erschien jedoch im Kontext der Mehrfachselektion eine geeignete Ergänzung zu sein.
-
-Auch hier wird die ästhetische, funktionale und interne Konsistenz bei den Textfeldern der Properties gewahrt, da sie exakt so aussehen, wie die bereits Bekannten bei der Auswahl eines Elements.
-Externe Konsistenz wird durch die Striche gewahrt, die als Platzhalter bei den Values der Properties fungieren, wenn die ausgewählten Elemente zum Beispiel bei der x-Koordinate unterschiedliche Werte aufweisen.
-
-In EB GUIDE ist es allgemein so, dass nur die Properties sichtbar sind, die für die aktuell ausgewählten Elemente relevant und veränderbar sind.
-Diese Einschränkung der Sichtbarkeit ist dementsprechend auch bei der Multiselektion zu beachten.
-Wenn also beispielsweise ein Bild und ein Text gleichzeitig ausgewählt sind, ist es nicht nötig eine Textproperty bereitzustellen, da diese nicht bei beiden Elementen anpassbar wäre.
-
-Das Prinzip der Affordanz wird bei den Buttons für die Alignment Actions berücksichtigt, indem diese einen Schatten bekommen um sie klickbar erscheinen zu lassen.
-Ebenfalls wird es wieder bei den Textfeldern neben den Buttons berücksichtigt, wie es auch bei der Filterfunktion bereits der Fall ist.
-
-Eine Rückmeldung an den Nutzer, dass seine Eingaben erfolgreich waren, erfolgt durch die sofortige Veränderung der Elemente im View, entweder durch Änderungen der Position, oder der Breite und Höhe.
 
 \begin{center}
   \includegraphics[scale=0.8]{figures/Mehrfachselektion_Adaption02.png}
   \captionof{figure}{Verbesserung Mehrfachselektion}
   \label{fig:Mehrfachselektion_Adaption}
 \end{center}
+
+Auch hier wird die ästhetische, funktionale und interne Konsistenz bei den Textfeldern der Properties gewahrt, da sie exakt so aussehen, wie die bereits Bekannten bei der Auswahl eines Elements.
+Externe Konsistenz wird durch die Striche gewahrt, die als Platzhalter bei den Values der Properties fungieren, wenn die ausgewählten Elemente zum Beispiel bei der x-Koordinate unterschiedliche Werte aufweisen.
+In EB GUIDE ist es allgemein so, dass nur die Properties sichtbar sind, die für die aktuell ausgewählten Elemente relevant und veränderbar sind.
+Diese Einschränkung der Sichtbarkeit ist dementsprechend auch bei der Multiselektion zu beachten.
+Wenn also beispielsweise ein Bild und ein Text gleichzeitig ausgewählt sind, ist es nicht nötig eine Text Property bereitzustellen, da diese nicht bei beiden Elementen anpassbar wäre.
+
+Das Prinzip der Affordanz wird bei den Buttons für die Alignment Actions berücksichtigt, indem diese einen Schatten bekommen um sie klickbar erscheinen zu lassen.
+Ebenfalls wird es wieder bei den Textfeldern neben den Buttons berücksichtigt, wie es auch bei der Filterfunktion bereits der Fall ist.
+
+Eine Rückmeldung an den Nutzer, dass seine Eingaben erfolgreich waren, erfolgt durch die sofortige Veränderung der Elemente im View, entweder durch Änderungen der Position, oder der Breite und Höhe.
 
 Zusätzlich dazu soll es noch möglich sein Bilder in Templates über Multiselektion einzufügen.
 Das Design hierfür ist in \cref{fig:Mehrfachselektion_Adaption_Template} zu sehen.
