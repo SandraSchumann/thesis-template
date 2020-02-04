@@ -1,16 +1,16 @@
 \chapter{Umsetzung}\label{ch:experiments}
 
 Nach Abschluss der Spezifikation der Benutzeranforderungen wird nun in den dritten Schritt des Human-Centered Design Process übergegangen.
-Hier gilt es, dass UX Design zu erstellen, wobei der Style GUIDE bereits am Ende des letzten Kapitels fertiggestellt wurde.
+Hier gilt es, dass UX Design zu erstellen, wobei der Styleguide bereits am Ende des letzten Kapitels fertiggestellt wurde.
 In den folgenden Abschnitten werden noch die benötigten Interaktionsmöglichkeiten definiert und ein, auf diesen Erkenntnissen aufbauender Prototyp erstellt.
 
 Der Großteil der Anpassungen wird in Form eines Prototypen umgesetzte, um weitere Evaluierungen leichter durchführen zu können und um eventuelle Anpassungen innerhalb kommender Iterationen leichter umsetzen zu können.
-Konkret werden die große Anpassungen der Multiselektion und die kleine Änderungen für die Template Properties innerhalb des Prototypen umgesetzte und untersucht, der Filter für die Widget Feature Properties hingegen wird direkt im EB GUIDE Projekt implementiert.
+Konkret werden die große Anpassung der Multiselektion und die kleine Änderunge für die Template Properties innerhalb des Prototypen umgesetzt und untersucht, der Filter für die Widget Feature Properties hingegen wird direkt im EB GUIDE Projekt implementiert.
 Dies hat den Hintergrund, dass es bei der Multiselektion absehbar ist, dass hier noch einige Anpassungen nötig sein werden, bis das Design und die Funktionalität an die Bedürfnisse der Nutzer angepasst sind.
 Das liegt vor allem daran, dass hier noch keinerlei Grundlagen in EB GUIDE vorhanden sind, auf denen aufgebaut werden kann.
 Bei den Template Properties hat die Umsetzung innerhalb des Prototypen den Hintergrund, dass hier nicht sicher gesagt werden kann, ob die Verlagerung der Funktion \glqq publish to template interface\grqq{} von den Nutzern tatsächlich angenommen oder überhaupt an der angedachten Stelle intuitiv erwartet wird.
 Es ist hier auch sehr wahrscheinlich, dass an der Darstellung, Positionierung und der Kombination mit der bisherigen Position noch einige Anpassungen stattfinden müssen.
-Daher ist es sinnvoll, sich in diesem Fall strikt an den Human-Centered Design Process zu halten und innerhalb dessen Iterationen, solange das UX design zu verbessern bis es sicher den Nutzeranforderungen entspricht.
+Daher ist es sinnvoll, sich in diesem Fall strikt an den Human-Centered Design Process zu halten und innerhalb dessen Iterationen, solange das UX Design zu verbessern bis es sicher den Nutzeranforderungen entspricht.
 Ansonsten würde hoher Entwicklungsaufwand in Anpassungen fließen die noch häufig verändert oder komplett verworfen werden müssen.
 Die Anpassung des Prototypen kann in diesen Fällen schneller, minimalistischer und mit kleinerem Aufwand erfolgen.
 
@@ -18,7 +18,7 @@ Im Gegensatz dazu macht es Sinn die Filterfunktion direkt in EB GUIDE zu impleme
 Aus den bereits durchgeführten Analysen geht hervor, dass dieser Filter einen großen Mehrwert für die Nutzer bieten würde.
 Im Gegensatz zu den beiden anderen Änderungen gibt es hier keinen großen Spielraum mehr für Anpassungen, da sich das Design an den bereits bestehenden Filter und Suchfunktionen innerhalb von EB GUIDE orientiert.
 Die einzige eventuelle Anpassung die hier noch auftreten könnte, wäre eine Änderung der Position.
-Ob dies jedoch innerhalb eines Prototypen oder im XAML Code stattfindet, macht - betrachtet man den zeitlichen Aufwand - keinen Unterschied.
+Ob dies jedoch innerhalb eines Prototypen oder im Code stattfindet, macht - betrachtet man den zeitlichen Aufwand - keinen Unterschied.
 Daher ist es hier effizienter, die Änderungen direkt zu implementieren und das Verhalten nicht zuerst innerhalb eines Prototypen zu simulieren.
 
 \section {Prototyp Multiselektion und Template Properties}
@@ -70,8 +70,8 @@ Hier ist es beispielsweise ebenfalls möglich Skalierungen vorzunehmen oder Umra
 
 Möchte man nun erreichen, dass die Farbe des sichtbaren Kreises sich an der Auswahl innerhalb der Droplist orientiert, muss Logik zu dem Prototypen hinzugefügt werden.
 Zuerst ist es, wie in Teil a von \cref{fig:Droplist} zu sehen, nötig Optionen zu der Droplist hinzuzufügen.
-Innerhalb des Interactionpanels besteht dann die Möglichkeit, über IF Conditions abzufragen, welche Option aktuell ausgewählt ist.
-Passend dazu wir der Kreis mit der gewünschten Farbe angezeigt, und die Visibility der anderen Kreise entsprechend auf null gesetzt.
+Innerhalb des Interaction Panel besteht dann die Möglichkeit, über IF Conditions abzufragen, welche Option aktuell ausgewählt ist.
+Passend dazu wird der Kreis mit der gewünschten Farbe angezeigt, und die Visibility der anderen Kreise entsprechend auf null gesetzt.
 
 \begin{figure}%
 \centering
@@ -113,7 +113,7 @@ Daher wird vor der Erstellung des Prototyps festgelegt welche Interaktionen von 
 
 Für die Prüfung der Usability der Ergänzungen ist es jedoch nicht ausreichend nur die neuen oder ergänzten Funktionen zu simulieren.
 Um diese überhaupt anwenden zu können muss der Nutzer einen gewissen Fortschritt innerhalb des Modellierungsprozesses erreicht haben.
-Um an diesen Punkt zu gelangen ist es unbedingt notwendig, dass dem Nutzer gewissen Grundfunktionen von EB GUIDE zur Verfügung stehen.
+Um an diesen Punkt zu gelangen ist es unbedingt notwendig, dass dem Nutzer gewisse Grundfunktionen von EB GUIDE zur Verfügung stehen.
 Das bedeutet für den konkreten Fall dieser Bachelorarbeit, dass es für den Nutzer möglich sein muss wie gewohnt Elemente per Drag and Drop in den View zu ziehen, und diese dort auch frei bewegen zu können.
 Ebenfalls müssen die Properties aller Widgets frei anpassbar sein und die Elemente müssen wie gewohnt auf die Eingaben des Nutzers reagieren.
 Da sich die Funktion \glqq publish to template interface\grqq{} innerhalb der Templates befindet, muss auch die Möglichkeit bestehen Templates anzulegen.
@@ -225,7 +225,7 @@ Hier wird im Prototypen die Umsetzung in Bezug auf den Testcase eingeschränkt.
 Da ein Startscreen modelliert werden soll, reicht die Möglichkeit die Bilder Horizontal aneinander auszurichten, die Vertikale Ausrichtung ist von Texten an Bildern möglich.
 In \cref{fig:Prototyp_06} ist die Umsetzung im Prototyp zu sehen, wobei Teil a) bei zwei ausgewählten Bildern und Teil b) bei der gleichzeitigen Auswahl von Bild und Label sichtbar ist.
 Die Alignment Actions liegen bei der Auswahl von zwei Objekten des gleichen Typs unten, und bei der Auswahl von zwei unterschiedlichen oben.
-Bei letzterem Fall kann eher davon ausgegangen werden. dass keine Properties gemeinsam angepasst werden müssen, sondern die zwei unterschiedlichen Objekte eher aneinander ausgerichtet werden sollen.
+Bei letzterem Fall kann eher davon ausgegangen werden, dass keine Properties gemeinsam angepasst werden müssen, sondern die zwei unterschiedlichen Objekte eher aneinander ausgerichtet werden sollen.
 Die tatsächliche Ausrichtung wird durch Klick auf den Button ausgelöst, indem der eingegebene Abstand auf den Variablenwert des weiter links oder weiter oben liegenden Objektes aufaddiert wird und der globalen Variable des zweiten Items zugewiesen wird.
 Dadurch verschiebt sich das zweite Objekt und der Abstand der zwei Objekte entspricht dem eingegebenem Wert.
 
@@ -279,7 +279,7 @@ Zusätzlich sollen bei der Nutzereingabe die aktuell bestehenden Kategorien vers
 EB GUIDE Studio wird als WPF Anwendung umgesetzt und ist somit in C\# geschrieben.
 WPF ist Teil des .NET-Frameworks 3.0, auf dessen Basis dem Entwickler eine große objektorientierte Klassenbibliothek zur Verfügung steht.
 Innerhalb dieser Klassenbibliothek ist auch C\# zu finden, welche eine typsichere, objektorientierte Allzweck-Programmiersprache ist.
-Für die Deklaration der Elemente des User Interfaces benutzt WPF die Beschreibungssprache XAML, wleche auf XML basiert.
+Für die Deklaration der Elemente des User Interfaces benutzt WPF die Beschreibungssprache XAML, welche auf XML basiert.
 
 Da das Projekt firmenintern als eine Visual Studio Solution vorliegt, werden auch sämtliche Implementierungen im Rahmen dieser Arbeit innerhalb dieser Entwicklungsumgebung umgesetzt.
 
@@ -299,8 +299,7 @@ Die aufgeführten Probleme entstehen durch die starke Abhängigkeit der folgende
 
 Innerhalb des MVVM Pattern wird dieser zusammenfügende Code als das View Model bezeichnet.
 Dessen grundlegende Aufgabe ist es, eine Trennung der View und des Models zu arrangieren und dadurch die Erstellung der Struktur und die Wartung der Anwendung zu vereinfachen.
-
-Sobald sich ein Wert innerhalb des View Models ändert, wir der neue Wert, mithilfe von Data binding und Benachrichtigungen, automatisch im View aktualisiert.
+Sobald sich ein Wert innerhalb des View Models ändert, wird die Anpassung, mithilfe von Data Binding und Benachrichtigungen, automatisch im View aktualisiert.
 Wenn der Nutzer hingegen mit dem View interagiert, zum Beispiel einen Button drückt, wird eine, sich im View Model befindende Command ausgelöst, die die gewollte Aktion ausführt.
 Während dieses Prozesses modifiziert das View Model die Daten des Models, die View selbst führt nie eine direkte Änderung auf dem Model aus.
 Tatsächlich weiß die View nicht von der Existenz der Model Klasse, während das Model nicht weiß das die View existiert.
@@ -312,7 +311,7 @@ Das Pattern umfasst also die drei Hauptbestandteile:
 	\item ViewModel (Vermittler zwischen View und Model)
 \end{itemize}
 
-Wie in \cref{fig:MVVM} zu sehen, fungiert das ViewModel als Schnittstelle zwischen dem Model und der View. Es stellt ein Data binding zwischen den beiden Instanzen bereit und verarbeitet über Commands alle Eingaben des Nutzers.
+Wie in \cref{fig:MVVM} zu sehen, fungiert das ViewModel als Schnittstelle zwischen dem Model und der View. Es stellt ein Data Binding zwischen den beiden Instanzen bereit und verarbeitet über Commands alle Eingaben des Nutzers.
 Die View bindet ihre Kontrollwerte an Properties des ViewModels, welche im Gegenzug die Daten der Modelobjekte bereit stellen.
 
 \begin{center}
@@ -372,7 +371,7 @@ Zusätzlich dazu wird dem AvailableWidgetFeatures in Auflistung \ref{lst:Collect
 
 Das Update vonseiten der View wird aufgrund des, in Auflistung \ref{lst:XAML} in Zeile 5 bis 6 zu sehenden, UpdateSourceTriggers ausgelöst. 
 Hier wird über die Angabe des Paths festgelegt, dass bei jeder Änderung der Text Property die Properties des FilterTextes aktualisiert werden.
-Zusätzlich wird hier ein Delay von 100 eingeführt, um die Filterung in Echtzeit zu ermöglichen.
+Zusätzlich wird hier ein Delay von 100 ms eingeführt, um die Filterung in Echtzeit zu ermöglichen.
 Dieses Zeitintervall führt dazu, dass der Nutzer auch bei einer schnellen Eingabe nicht durch eine verzögerte Aktualisierung in seinem Arbeitsablauf unterbrochen  oder verlangsamt wird.
 
 \lstinputlisting[caption={Filterpanel in xaml},captionpos=b,  label=lst:XAML]{listings/Filter_Panel.xaml}
