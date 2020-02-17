@@ -1,84 +1,41 @@
 \chapter{Fazit}\label{ch:summary}
 
-Human-Centered Design Process wurde einmal durchlaufen
-eine Steigerung der Usability konnte vrzeichnet werden, auch wenn nicht alle definierten Benutzeranforderungen zufriedenstellend erfüllt wurden
-ist für den Umfang einer Iteration ein zu erwartendes Ergebnis
+Im Rahmen dieser Bachelorarbeit wurde eine Iteration des Human-Centered Design Process durchlaufen.
+Hierbei wurden Usabilityschwächen im Interface von EB GUIDE 6 entdeckt, woraufhin drei dieser Defizite verbessert wurden.
+Durch diese eingearbeiteten Verbesserungen konnte eine Steigerung der Usability verzeichnet werden, auch wenn nicht alle definierten Benutzeranforderungen zufriedenstellend erfüllt werden konnten.
+Für den zeitlichen Rahmen, in dem nur eine Iteration des Design Process vorgesehen war, entspricht dieses Ergebnis jedoch den Erwartungen, und kann mithilfe weiterer Iterationen noch verbessert werden.
 
-Um Usability messbar zu machen wurden Benutzeranforderungen definiert
-Dies geschah auf der Grundlage von Untersuchungen
-	Beobachtung der Zielgruppe bei ihrer täglichen Arbeit, hierbei Definition von
-		der Arbeitsumgebung (EB GUIDE)
-		Nutzergruppe (Mit der die Tests anschließend durchgeführt werden)
-		gewohnte Arbeitsaufgaben der Nutzer
+Die, für die Bewertung der abschließenden Messungen benötigten Benutzeranforderungen, wurden hierbei auf Grundlage von Untersuchungen der Arbeitsabläufe formuliert.
+Während dieser Untersuchungen wurden Personen aus der zutreffenden Zielgruppe bei ihrer täglichen Arbeit beobachtet.
+Dadurch konnten repräsentative Schwachstellen im User Interface von EB GUIDE aufgedeckt werden, für welche qualitative Nutzeranforderungen definiert werden konnten.
+Aus allen gefunden Schwächen wurden drei ausgewählt, wobei darauf geachtet wurde eine große und zwei kleine Anpassungen zu wählen mit welchen die Usabilitymerkmale Effizienz und Fehlerrate überprüft werden können.
 
-Für beobachtete Schwächen werden qualitative Nutzeranforderungen definiert
-Von allen 5 Schwächen wurden drei ausgewählt 
-	nach Kriterien:
-		Mischung aus nach einer Iteration bereits Ergebnisse und weitere Verfolgung der Arbeit für Elektrobit möglich
-			von daher zwei kleinerer und eine große Anpassung
-		Zwei Prinzipien der Usability werden untersucht
-			Effizienz und Fehlerrate
-		Anpassungen die den Nutzern aktuell den größten Mehrwert liefern
+Zu diesem Zeitpunkt der Arbeit war noch nicht klar, dass ein Teil der ausgewählten Anpassungen mithilfe eines Prototyps und ein Teil implementiert umgesetzt werden würde.
+Diese Tatsache führte bei dem abschließenden Test zur Notwendigkeit, diesen in zwei Teile aufzuspalten, was für den Nutzer durch die Unterbrechung des Arbeitsablaufes eine unnatürliche Situation erzeugt hat.
+Von daher wäre es bereits an dieser Stelle hilfreich gewesen sich über die Umsetzung der Anpassungen Gedanken zu machen, und nur solche zu wählen die einen zusammenhängenden Testablauf ermöglichen.
 
-	Auswahl:
-		Template Properties puplish to template interface eignet sich
-			Zeit gut messbar, Fehlerrate ebenfallse und Nutzer können zusätzlich gut befragt werden welche Position sie vorziehen
-			kleine Anpassung
-	
-		Filter der Widget Feature Properties
-			Mehrwert absehbar, Zeit und Fehlerrate gut messbar
-			großer Mehrwert für die Nutzer
-			kleine Anpassung
+Bei der Überarbeitung der ausgewählten Schwächen - Funktion  \glqq puplish to template interface\grqq{}, Filter für die \glqq Widget Feature Properties\grqq{} und  \glqq Mehrfachselektion\grqq{} - wurde sich beim Entwurf des Designs an bekannte Gestaltprinzipien gehalten.
+Für die Umsetzung dieser Entwürfe mussten zusätzlich Interaktionsmöglichkeiten definiert werden, die der Prototyp oder die Software dem Nutzer bereitstellen muss, um eine erfolgreiche Interaktion zu gewährleisten.
+Im Rahmen des durchgeführten Test wurde deutlich, dass zwar nicht alle gewünschten Interaktionen durchgeführt werden konnten, es jedoch für jeden Nutzer möglich war das Ziel der Arbeitsaufgabe zu erreichen.
+Allgemein ist es - bei einer so umfangreichen Software wie EB GUIDE - nicht möglich oder nötig alle Funktionen derselbigen innerhalb eines Prototyps zu simulieren.
+Da die Nutzer alle ihr verfolgtes Ziel erreichen konnten, lässt sich jedoch festhalten, dass die Interaktionsmöglichkeiten die Bedürfnisse der Nutzer ausreichend abgedeckt haben, ohne unnötigen Aufwand für den Modellierer des Prototyps erzeugt zu haben.
 
-		Mehrfachselektion	
-			noch keine Unterstützung dieser Funktionen für EB GUIDE
-			Funktionalität ist man jedoch aus anderer Software gewohnt
-			Fehlerrate und Zeit gut messbar
-			große Anpassung
+Die Umsetzung - in Form eines Prototyps - wurde mit AXURE RP gelöst, was eine Einarbeitung in dieses Tool erfordert hat.
+Da die Dokumentation hierzu jedoch sehr ausführlich ist und auch Hilfestellung von Mitarbeitern von Elektrobit möglich war, war die Wahl dieser Software, rückwirkend betrachtet, gut geeignet.
+Auch war es möglich alle definierten Interaktionsmöglichkeiten -mithilfe der Möglichkeit Logik und globale Variablen in den Prototyp einzubauen - wie gewünscht umzusetzen.
+Die Implementierung des Filters wurde mithilfe von WPF und C\# gelöst, wobei bereits im Studium erlangte Kenntnisse zu diesen Programmiersprachen genutzt werden konnten.
+Deshalb war es lediglich nötig, sich in das Konzept des MVVM Pattern einzuarbeiten, sowie die Struktur des bestehenden Projektes zu verstehen.
 
-Beim Design dieser drei Verbesserungen wurde sich an bereits bestehenden Elementen in EB GUIDE oder in anderer Fremdsoftware gehalten
+Die abschließenden Tests wurden in Form von Remote Usability Tests umgesetzt.
+Aufgrund der örtlichen Verteilung der Probanden war dies eine offensichtliche Wahl, die auch zu gut vergleichbaren Ergebnissen bei der Auswertung führte.
+Die Wahl der Arbeitsaufgabe kann insofern positiv bewertet werden, dass die Nutzer intuitiv wussten was sie tun sollten und in welchem Zusammenhang die textuelle Angabe und der Styleguide zu betrachten sind.
 
-Für die Umsetzung der Entwürfe mussten Interaktionsmöglichkeiten definiert werden die vom Prototyp oder der Software bereitsgestellt werden müssen
-	
-	Bei Prototyp vor allem wichtig grundlegedne Funktionen von EB GUIDE zur Verfügung zu stellen
+Als Ergebnisse der Tests kann abschließend festgehalten werden, dass der Filter der Widget Feature Properties zwar die Effizienz steigert, jedoch aktuell noch zu Fehlern führt.
+Die neue Position der Funktion \glqq Publish to template interface\grqq{}, verringert die Fehlerrate der Nutzer und steigert gleichzeitig die Effizienz, weshalb diese Anpassung als abgeschlossen betrachtet, und implementiert werden kann.
+Im Rahmen der Multiselektion kann die Funktion \glqq Insert in Template\grqq{} verworfen werden, da die Probanden diese Funktion einstimmig als nicht intuitiv eingestuft haben.
+Die \glqq Alignment Actions\grqq{} steigern aktuell die Effizienz, erhöhen jedoch - vermutlich aufgrund der Fremdheit der neuen Funktionen - aktuell noch die Fehlerrate.
+Die gemeinsame Anpassung von Eigenschaften ausgewählter Elemente, bringt bei der Positionierung einen Mehrwert bei der Effizienz und senkt die Fehlerrate auf 0, bei der Skalierung von Objekten ist hier jedoch kein Mehrwert erkennbar.
 
-	Puplish to template interface muss an der neuen Position funktionieren
-	
-	Filter muss die Widget Feature Properties live nach der Eingabe des Nutzers filtern
-
-	Mehrfachselektion
-		Panel für gleichzeitig ausgewähle Elemente, gemeinsam im View bewegbar sein, Alignment Actions und Inster in Template
-
-	Prototype mithilfe von AXURE RP umgesetzte
-
-	FIlter mithilfe von WPF und C\# umgesetzt, von bestehender Projektstruktur vorgegeben, mithilfe von MVVM Pattern gelöst
-
-Test mit Lookback durchgeführt
-	
-	Remote Usability Test
-
-	Als Aufgabe die Modellierung einer Starstscreens wie aus HMI im Auto gewohnt
-		Hierfür noch quantitative Benutzeranforderungen formuliert mit denen die Usability gemessen werden kann
-
-	Arbeitsaufgabe als Styleguide und textuelle Angabe
-		Test mit 10 Nutzern und zwei verschieden gestellten Aufgaben um vergleichen zu können
-
-Ergebnisse
-	Filter steigert Effizienz, führt jedoch zu Fehlern
-
-	Publish to template interface, verringerte Fehlerrate und gesteigerte Effizienz
-
-	Multiselektion
-		Insert in Template verworfen
-		Alignment Actions steigern Effzienz, erhöhen jedoch auch Fehlerrate
-		Gemeinsame Positionierung schneller, und Fehlerrate von 0
-		Skalierung aktuell kein Mehrwert über Multiselektion
-
-
-Ergebnisse können in weiteren Iterationen verfolgt und ausgearbeitet werden
-		
-	
-
-	
-			
-		
+Aufgrund der Tatsache, dass der Prototyp einsatzfähig vorliegt, können damit noch weiterer Iterationen des Design Process durchlaufen werden und weiter auf die noch bestehenden Usabilityschwächen eingegangen werden.
+Es wurde mit dieser Arbeit also zum einen nach einer Iteration Ergebnisse erlangt, die in EB Guide als Verbesserung implementiert werden können.
+Zum anderen wurde eine Grundlage geschaffen und weitere Iterationen durchlaufen zu können und die große Anpassung der Multiselektion noch um weitere Inhalte zu ergänzen und testen zu können.
