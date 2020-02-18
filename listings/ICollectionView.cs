@@ -19,6 +19,8 @@
                 .Add(new SortDescription
                     ("Name", ListSortDirection.Ascending));
             viewSource.Source = WidgetFeatures;
+
+            // FilterSource is local Delegate
             viewSource
                 .Filter += new FilterEventHandler(FilterSource);
             viewSource.View.Refresh();

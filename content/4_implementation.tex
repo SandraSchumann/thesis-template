@@ -36,7 +36,7 @@ Ausschlaggebend für die Wahl dieser Software ist, dass AXURE RP 9 die Möglichk
 Da es sich bei EB GUIDE Studio um ein Modellierungstool handelt, ist ein rein statischer Prototyp nicht ausreichend.
 Ebenfalls reicht es nicht aus feste Hotspots zu haben bei deren Klick etwas passiert, sondern es ist notwendig, die in EB GUIDE herrschenden Einschränkungen für den Nutzer simulieren zu können.
 
-Ein weiterer Grund sich für diese Software zu entscheiden ist es, dass die UX Designer bei Elektrobit ebenfalls mit AXURE RP arbeitet.
+Ein weiterer Grund sich für diese Software zu entscheiden ist es, dass die UX Designer bei Elektrobit ebenfalls mit AXURE RP arbeiten.
 So ist zum einen gewährleistet, dass bei den Usabilitytest keine Schwierigkeiten mit der verwendeten Software auftreten würde, zum anderen ist dadurch gleichzeitig ein Ansprechpartner bei auftretenden Problemen vorhanden.
 
 In \cref{fig:Axure_Full} ist das Standardprojekt von AXURE RP zu sehen, welches die Grundlage eines jeden neuen Projektes bildet.
@@ -210,7 +210,7 @@ Da AXURE bei den logischen Bedingungen nur \glqq Match Any\grqq{} oder \glqq Mat
 Deshalb wird an diesem Punkt nur mit AND Bedingungen in den Abfragen gearbeitet, da jedoch für alle möglichen Kombinationen der drei zur Verfügung stehende Bildern jede Property einzeln abgefragt und angepasst werden muss, ergibt das eine Anzahl von 36 Abfragen.
 
 \begin{center}
-  \includegraphics[scale=0.6]{figures/Prototyp_05.PNG}
+  \includegraphics[scale=0.5]{figures/Prototyp_05.PNG}
   \captionof{figure}{Beispielbedingung Multiselektion}
   \label{fig:Prototyp_05}
 \end{center}
@@ -286,7 +286,8 @@ Da das Projekt firmenintern als eine Visual Studio Solution vorliegt, werden auc
 \paragraph{Design Pattern}
 In der Projektentwicklung wird das Model-View-ViewModel (MVVM) Design Pattern angewandt.
 Bei früheren Entwicklungen von User Interfaces, haben Entwickler häufig eine grafische View erstellt und im Nachhinein die Logik hinzugefügt.
-Dies geschieht meist in Form von Eventhandlern, Initialisierungen oder Datenmodellen im Code Behind, was zu einer starken gegenseitigen Abhängigkeit von Interface und der dahinter liegenden Logik führt.
+Dies geschieht meist in Form von Eventhandlern, Initialisierungen oder Datenmodellen die im so gennanten Code Behind liegen, über welchen die Logik der Anwendung gesteuert wird.
+Diese Entwicklungsmethofe führt zu einer starken gegenseitigen Abhängigkeit von Interface und der dahinter liegenden Logik.
 Dadurch entstehen Problematiken wie die Tatsache, dass nicht mehrere Entwickler gleichzeitig an der gleichen View arbeiten können, oder gegenseitig Code unbrauchbar gemacht wird.
 Logik und Aussehen eines Interface an einer Stelle zu bündeln führt also zu schlechter Wartbarkeit, Erweiterbarkeit und ist kaum testbar\cite{.g}.
 Die aufgeführten Probleme entstehen durch die starke Abhängigkeit der folgenden Komponenten.
@@ -314,6 +315,7 @@ Das Pattern umfasst also die drei Hauptbestandteile:
 Wie in \cref{fig:MVVM} zu sehen, fungiert das ViewModel als Schnittstelle zwischen dem Model und der View. Es stellt ein Data Binding zwischen den beiden Instanzen bereit und verarbeitet über Commands alle Eingaben des Nutzers.
 Die View bindet ihre Kontrollwerte an Properties des ViewModels, welche im Gegenzug die Daten der Modelobjekte bereit stellen.
 
+\newpage
 \begin{center}
   \includegraphics[scale=0.6]{figures/MVVM.PNG}
   \captionof{figure}{Model-View-ViewModel (MVVM) Design Pattern}
